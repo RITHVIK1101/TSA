@@ -34,43 +34,29 @@
   }
 
 
-.menu-item a::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: white;
-  transition: width 0.3s ease, left 0.3s ease;
-  transform: translateX(-50%);
-}
+
 
 .menu-item a:hover {
   opacity: 0.7; /* Lowering opacity on hover */
 }
 
-.menu-item a:hover::before {
-  width: 100%;
-  left: 0;
-}
-
+.menu-item a::before,
 .menu-item a::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
   width: 0;
   height: 2px;
   background-color: white;
-  transition: width 0.3s ease, left 0.3s ease;
-  transform: translateX(-50%);
+  transition: width 0.3s ease, left 0.3s ease; /* Removed left transition */
 }
 
+.menu-item a:hover::before,
 .menu-item a:hover::after {
   width: 100%;
-  left: 0;
+  left: 0; /* Align to the left edge of the button text */
 }
+
   
   .menu-item:hover a {
     background-color: rgba(255, 255, 255, 0.2);
@@ -80,7 +66,11 @@
     display: none;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    height:800%;
+    padding:40%;
+    width:850%;
+    left:-350%;
+    top:130%;
   }
   
   .menu-item:hover .submenu {
