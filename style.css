@@ -1,0 +1,62 @@
+.navbar {
+    background-color: rgba(0, 100, 0, 0.7); /* Dark green with transparency */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  body {
+    font-family: 'Work Sans', sans-serif;
+  }
+  
+  .logo img {
+    width: 100px; /* Adjust size as needed */
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu-item {
+    position: relative;
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    font-size:25px;
+  }
+  
+  .menu-item:hover a {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+  }
+  
+  .menu-item:hover .submenu {
+    display: block;
+  }
+  
+  .submenu li {
+    margin: 5px 0;
+  }
+  
+  .submenu li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .submenu li a:hover {
+    text-decoration: underline;
+  }
+  
