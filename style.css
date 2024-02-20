@@ -1,92 +1,231 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/Users/rithviksaba/Desktop/TSA COMP/TSA/imgs/n.png');
+  background-size: 100% 100%; /* Set the width to 100% of the viewport width */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Maintain the height as 100% of the viewport height */
+  z-index: -1;
+}
 .navbar {
-    background-color: rgba(0, 100, 0, 0.7); /* Dark green with transparency */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-
-  body {
-    font-family: 'Work Sans', sans-serif;
-  }
-  
-  .logo img {
-    width: 100px; /* Adjust size as needed */
-  }
-  
-  .menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .menu-item {
-    position: relative;
-  }
-  
-  .menu-item a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    transition: opacity 0.3s ease;
-    position: relative; 
-    font-size:25px;
-  }
-
-
-
-
-.menu-item a:hover {
-  opacity: 0.7; /* Lowering opacity on hover */
+  background-color: rgba(255, 255, 255, 0.266); /* Dark green with transparency */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Rubik', sans-serif;
+  padding: 2% 1%;
+  border-radius: 30px;
+  margin-top: 1%;
+  margin-left: 5%;
+  width:90%;
+  height:11%;
+  position:fixed;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
 }
 
-.menu-item a::before,
-.menu-item a::after {
+.menu-item {
+  position: relative;
+}
+
+.menu-item  {
+  text-decoration: none;
+  color: rgba(11, 0, 0, 0.945);
+  padding: 10px;
+  transition: opacity 0.3s ease;
+  position: relative; 
+  font-size:18px;
+}
+
+.menu-item :hover {
+  opacity: 0.5; /* Lowering opacity on hover */
+  border-radius: 15px;
+  color:rgb(1, 6, 10);
+}
+.menu-item:hover .submenu {
+  display: flex;
+}
+
+
+.menu-item ::before,
+.menu-item ::after {
   content: "";
   position: absolute;
   bottom: 0;
   width: 0;
-  height: 2px;
-  background-color: white;
-  transition: width 0.3s ease, left 0.3s ease; /* Removed left transition */
+  height: 7%;
+  background-color: rgb(15, 3, 3);
+  transition: width 0.3s ease, left 0.3s ease; /* Add left transition back */
+  left: 50%; /* Start from the middle */
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
 }
 
-.menu-item a:hover::before,
-.menu-item a:hover::after {
+.menu-item {
+  position: relative;
+}
+
+.menu-item  {
+  text-decoration: none;
+  color: rgba(11, 0, 0, 0.945);
+  padding: 18px;
+  transition: opacity 0.3s ease;
+  position: relative; 
+  font-size:18px;
+}
+
+.menu-item :hover {
+  opacity: 0.5; /* Lowering opacity on hover */
+  border-radius: 15px;
+  color:rgb(1, 6, 10);
+}
+.menu-item:hover .submenu {
+  display: flex;
+}
+
+
+.menu-item ::before,
+.menu-item ::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 7%;
+  background-color: rgb(15, 3, 3);
+  transition: width 0.3s ease, left 0.3s ease; /* Add left transition back */
+  
+}
+
+.menu-item :hover::before,
+.menu-item :hover::after {
+  width: 50%; /* Extend the line to half of the button width */
+}
+
+.menu-item :hover::before {
+  left: 0; /* Align to the left edge when hovering */
+}
+
+.menu-item :hover::after {
+  left: 50%; /* Align to the right edge when hovering */
+}
+
+
+
+.submenu {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-around; /* Distribute cards evenly */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  display: none;
+  position: absolute;
+  background-color: rgba(243, 243, 243, 0.855);
+  padding: 10px; /* Adjust padding as needed */
+  width: 850%;
+  left: -350%;
+  top: 105%; /* Position the submenu directly below the .menu-item */
+  border-radius: 10px;
+  opacity: 0;
+  height:30rem;
+}
+
+
+
+.menu-item:hover .submenu {
+  opacity: 1;
+  transform: translateY(0);  
+}
+.menu-item:not(:hover) .submenu {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.1s; 
+}
+
+.submenu .card:hover {
+  transform: scale(1.05); /* Slightly scale up the card on hover */
+  box-shadow: 0 5px 15px rgba(8, 75, 209, 0.831); /* Add a glow effect on hover */
+  
+  transition: all 0.2s ease-in-out;
+}
+.card-container {
+  display: flex;
+  justify-content: space-around; /* Distributes cards evenly */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+ 
+}
+
+
+.card:hover {
+  transform: scale(1.05); /* Slightly scale up the card on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect on hover */
+}
+
+
+.submenu .card {
+  width: calc(50% - 25px); /* Adjust width and margin as needed */
+  height: 13rem; /* Adjust height as needed */
+  margin: 10px;
+  padding: 5px; /* Remove padding to fit images properly */
+  border-radius: 10px;
+  background-color: rgb(2, 34, 11); /* Card background color */
+}
+
+.submenu .card img {
   width: 100%;
-  left: 0; /* Align to the left edge of the button text */
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire area of the card */
+  border-radius: 10px; /* Adjust border radius if needed */
 }
 
-  
-  .menu-item:hover a {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .submenu {
-    display: none;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
-    height:800%;
-    padding:40%;
-    width:850%;
-    left:-350%;
-    top:130%;
-  }
-  
-  .menu-item:hover .submenu {
-    display: block;
-  }
-  
-  .submenu li {
-    margin: 5px 0;
-  }
-  
-  .submenu li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .submenu li a:hover {
-    text-decoration: underline;
-  }
-  
+main {
+  position: relative;
+  top: 100vh; /* Change from 400rem to 100vh */
+  left: 0;
+  width: 100vh;
+  height: 100vw;
+  transform-origin: top left;
+  transform: rotate(-90deg) translateX(-100vh);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 0;
+}
+
+
+article {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  transform-origin: top left;
+  transform: rotate(90deg) translateY(-100vh);
+}
+section {
+  width: 100vw;
+  height: 100vh;
+/*   scroll-snap-align: start; */
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 3rem;
+/*  backface visibility keeps font from looking weird  */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+section:nth-of-type(odd) {
+  background: #111;
+  color: #fff;
+}
+
+section:nth-of-type(even) {
+  background: rgb(63, 27, 27);
+  color: #fff;
+}
