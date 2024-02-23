@@ -1,92 +1,9 @@
-.navbar {
-    background-color: rgba(0, 100, 0, 0.7); /* Dark green with transparency */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-  body {
-    font-family: 'Work Sans', sans-serif;
-  }
-  
-  .logo img {
-    width: 100px; /* Adjust size as needed */
-  }
-  
-  .menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .menu-item {
-    position: relative;
-  }
-  
-  .menu-item a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    transition: opacity 0.3s ease;
-    position: relative; 
-    font-size:25px;
-  }
-
-
-
-
-.menu-item a:hover {
-  opacity: 0.7; /* Lowering opacity on hover */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff; /* Dark green background */
+  color: #ffffff; /* White text color */
 }
-
-.menu-item a::before,
-.menu-item a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: white;
-  transition: width 0.3s ease, left 0.3s ease; /* Removed left transition */
-}
-
-.menu-item a:hover::before,
-.menu-item a:hover::after {
-  width: 100%;
-  left: 0; /* Align to the left edge of the button text */
-}
-
-  
-  .menu-item:hover a {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .submenu {
-    display: none;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
-    height:800%;
-    padding:40%;
-    width:850%;
-    left:-350%;
-    top:130%;
-  }
-  
-  .menu-item:hover .submenu {
-    display: block;
-  }
-  
-  .submenu li {
-    margin: 5px 0;
-  }
-  
-  .submenu li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .submenu li a:hover {
-    text-decoration: underline;
-  }
-  
