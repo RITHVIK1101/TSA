@@ -1,4 +1,9 @@
 /*Carbon Footprint Calculator*/
+.calc-hero{
+  background-color: #ffffff;
+  padding: 20px 0px 20px 0px;
+}
+
 .calc-container {
     display: flex;
   }
@@ -47,9 +52,14 @@
     background-color: #1d6921;
 
   }
+
   .carbon-footprint-header {
     text-align: center;
     color: #666;
+    font-size: 50px;
+    background-image: linear-gradient(to right, #964B00 10%, #FFA500 20%, #006400 70%, #003300 90%); /* Brown to Orange to Green gradient */
+    -webkit-background-clip: text; /* Apply background to the text */
+    color: transparent;
   }
   .image-column {
     display: flex;
