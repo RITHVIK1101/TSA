@@ -1,0 +1,109 @@
+.navbar {
+  background-color: #4b4a475b; /* Dark green with transparency */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Rubik', sans-serif;
+  padding: 2% 1%;
+  margin-top: 0;
+  margin-left: 0;
+  width: 99%;
+  height: 6%;
+  position: fixed; /* Ensure navbar is always on top */
+  z-index: 2; /* Higher z-index to stay above the background image */
+  backdrop-filter: blur(4px);
+}
+
+.menu {
+  display: flex;
+  gap: 2em;
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin-right: 7em;
+}
+.nunito-sans {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.menu-item a {
+  text-decoration: none; /* Remove underline from links */
+    color: #f6f8f7;
+    padding: 18px;
+    position: relative; /* Position relative to contain pseudo-element */
+    font-size: 18px;
+    font-weight: 900;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+}
+
+.menu-item a:hover {
+  color: #08f57e;
+  animation: fadeIndown 2s;
+}
+
+.menu-item a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.2em; /* Height of the underline */
+  width: 0; /* Initially, set width to 0 */
+  background-color: #ebeeed; /* Color of the underline */
+  transition: width 0.3s ease; /* Transition effect for the width */
+}
+
+.menu-item a:hover::after {
+  width: 100%; /* On hover, expand the width to 100% */
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9f0;
+  min-width: 10em; /* Increase the minimum width for more space */
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  left:-2em;
+  height:18em;
+  bottom: -19em;
+  text-align: center;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 1em; /* Add padding to create space around each option */
+  text-decoration: none;
+  color: #333; /* Adjust text color for better readability */
+  border-bottom: 1px solid #ccc; /* Add a slim line between each option */
+}
+.dropdown-content a:last-child {
+  border-bottom: none; /* Remove the line after the last option */
+}
+.dropdown-content a:hover {
+  background-color: #01040b; /* Change background color on hover for better visual feedback */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover::after {
+  width: 0; /* Remove the underline effect on hover for dropdown options */
+}
+.menu-item.dropdown::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0.2em; /* Adjust the distance from the right side */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; /* Size and color of the arrow */
+  border-right: 5px solid transparent; /* Size and color of the arrow */
+  border-top: 5px solid #0bea43d8; /* Size and color of the arrow */
+}
