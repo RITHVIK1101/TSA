@@ -4,14 +4,15 @@
   justify-content: space-between;
   align-items: center;
   font-family: 'Rubik', sans-serif;
-  padding: 2% 1%;
+  padding: 2%;
   margin-top: 0;
   margin-left: 0;
-  width: 99%;
+  width: 100%;
   height: 6%;
   position: fixed; /* Ensure navbar is always on top */
   z-index: 2; /* Higher z-index to stay above the background image */
   backdrop-filter: blur(4px);
+  margin-left: 0;
 }
 
 .menu {
@@ -37,10 +38,11 @@
     font-weight: 900;
     font-family: "Nunito Sans", sans-serif;
     font-weight: 700;
+    text-emphasis: bold;
 }
 
 .menu-item a:hover {
-  color: #08f57e;
+  color: #00ff77;
   animation: fadeIndown 2s;
 }
 
@@ -49,10 +51,10 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 0.2em; /* Height of the underline */
+  height: 0.15em; /* Height of the underline */
   width: 0; /* Initially, set width to 0 */
-  background-color: #ebeeed; /* Color of the underline */
-  transition: width 0.3s ease; /* Transition effect for the width */
+  background-color: #f5f7f6; /* Color of the underline */
+  transition: width 1s ease; /* Transition effect for the width */
 }
 
 .menu-item a:hover::after {
@@ -68,7 +70,7 @@
   background-color: #f9f9f9f0;
   min-width: 10em; /* Increase the minimum width for more space */
   box-shadow: 0 1em 2em rgba(0, 0, 0, 0.2);
-  border-radius: 0.5em;
+  
   left:-2em;
   height:18em;
   bottom: -19em;
@@ -80,13 +82,14 @@
   padding: 1em; /* Add padding to create space around each option */
   text-decoration: none;
   color: #333; /* Adjust text color for better readability */
-  border-bottom: 1px solid #ccc; /* Add a slim line between each option */
+  border-bottom: 0.1em solid rgb(0, 6, 3); /* Add a slim line between each option */
 }
 .dropdown-content a:last-child {
   border-bottom: none; /* Remove the line after the last option */
 }
 .dropdown-content a:hover {
   background-color: #01040b; /* Change background color on hover for better visual feedback */
+
 }
 
 .dropdown:hover .dropdown-content {
@@ -99,11 +102,11 @@
   content: '';
   position: absolute;
   top: 50%;
-  right: 0.2em; /* Adjust the distance from the right side */
+  right: 0.05em; /* Adjust the distance from the right side */
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-left: 5px solid transparent; /* Size and color of the arrow */
-  border-right: 5px solid transparent; /* Size and color of the arrow */
-  border-top: 5px solid #0bea43d8; /* Size and color of the arrow */
+  border-left: 8px solid transparent; /* Size and color of the arrow */
+  border-right: 8px solid transparent; /* Size and color of the arrow */
+  border-top: 8px solid #030303d8; /* Size and color of the arrow */
 }
