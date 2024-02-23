@@ -1,0 +1,65 @@
+/*Carbon Footprint Calculator*/
+.calc-container {
+    display: flex;
+  }
+  
+  .calc-column {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(2, 2, 2, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  .carbon-footprint-explainer {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  .calculator {
+    flex: 1;
+  }
+  .calc-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  .calc-container select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  .calc-container button {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .calc-container button:hover {
+    background-color: #1d6921;
+
+  }
+  .carbon-footprint-header {
+    text-align: center;
+    color: #666;
+  }
+  .image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .rounded-image{
+    border-radius: 10px;
+    max-width: 580px;
+    height: auto;
+  }
