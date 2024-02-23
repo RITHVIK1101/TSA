@@ -55,7 +55,6 @@
 
   .carbon-footprint-header {
     text-align: center;
-    color: #666;
     font-size: 50px;
     background-image: linear-gradient(to right, #964B00 10%, #FFA500 20%, #006400 70%, #003300 90%); /* Brown to Orange to Green gradient */
     -webkit-background-clip: text; /* Apply background to the text */
@@ -72,4 +71,8 @@
     border-radius: 10px;
     max-width: 580px;
     height: auto;
+  }
+
+  .output-text {
+    color: #666;
   }

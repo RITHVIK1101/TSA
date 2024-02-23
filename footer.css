@@ -6,16 +6,6 @@
     position: relative; /* Make the footer position relative */
   }
   
-  .footer::before { /*bar over footer */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #aaaaaa; 
-  }
-  
   .footer-container {
     display: flex;
     justify-content: center;

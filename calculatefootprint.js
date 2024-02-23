@@ -20,5 +20,5 @@ function calculateCarbonFootprint() {
 
     // Display result
     var resultElement = document.getElementById('result');
-    resultElement.innerHTML = "<p> Your estimated carbon footprint per year is: " + totalCarbonFootprint + " kilograms</p>";
+    resultElement.innerHTML = "<p class = 'output-text'> Your estimated carbon footprint per year is: " + totalCarbonFootprint + " kilograms</p>";
 }
