@@ -14,7 +14,7 @@
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 5px 5px 30px rgba(2, 2, 2, 0.1);
+    box-shadow: 2.5px 5px 12px #46464649;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,6 +33,7 @@
     font-weight: bold;
     margin-bottom: 5px;
     color: #666;
+    font-size: 1.25em;
   }
   .calc-container select {
     width: 100%;
@@ -74,6 +75,7 @@
     max-width: 580px;
     height: auto;
     transition: transform 0.5s ease;
+    box-shadow: 2.5px 5px 12px #1d1d1d90;
   }
 
   .rounded-image:hover{

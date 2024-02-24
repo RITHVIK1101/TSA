@@ -1,6 +1,6 @@
 .about-us-section {
     background-color: #ffffff;
-    padding-top: 5%;
+    padding-top: 2.5%;
     padding-bottom: 2.5%;
 }
 
@@ -9,13 +9,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    max-width: 1200px; /* Adjust max-width as needed */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .about-us-image{
     flex: 1;
     padding-right: 10%;
+    padding-top: 10%;
 }
 
 .about-us-image img {
@@ -24,7 +25,7 @@
     display: block;
     border-radius: 10px;
     transition: transform 0.5s ease;
-    box-shadow: 5px 5px 30px rgba(2, 2, 2, 0.1);
+    box-shadow: 2.5px 5px 12px #0f0f0f90;
   }
 
   .about-us-image img:hover{
@@ -45,7 +46,7 @@
 }
 
 .about-us-text p {
-    font-size: 1.1em;
+    font-size: 1.25em;
     line-height: 1.6;
     margin-bottom: 15px; /* Adjust margin as needed */
 }
