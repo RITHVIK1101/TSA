@@ -1,0 +1,51 @@
+.about-us-section {
+    background-color: #ffffff;
+    padding-top: 5%;
+    padding-bottom: 2.5%;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto;
+}
+
+.about-us-image{
+    flex: 1;
+    padding-right: 10%;
+}
+
+.about-us-image img {
+    max-width: 580px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+    box-shadow: 5px 5px 30px rgba(2, 2, 2, 0.1);
+  }
+
+  .about-us-image img:hover{
+    transform: scale(1.05);
+}
+
+.about-us-text {
+    flex: 1;
+    color: #666666; /* Grey text color */
+}
+
+.about-us-text h2 {
+    font-size: 3.1em;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    background-image: linear-gradient(to right, #964B00 5%, #FFA500 10%, #006400 60%, #003300 90%); /* Brown to Orange to Green gradient */
+    -webkit-background-clip: text; /* Apply background to the text */
+    color: transparent;
+}
+
+.about-us-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px; /* Adjust margin as needed */
+}
