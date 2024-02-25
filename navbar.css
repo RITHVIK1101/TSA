@@ -42,7 +42,7 @@
 }
 
 .menu-item a:hover {
-  color: #00ff77;
+  color: #07f379;
   animation: fadeIndown 2s;
 }
 
@@ -88,7 +88,7 @@
   border-bottom: none; /* Remove the line after the last option */
 }
 .dropdown-content a:hover {
-  background-color: #01040b; /* Change background color on hover for better visual feedback */
+  background-color: #01040b36; /* Change background color on hover for better visual feedback */
 
 }
 
