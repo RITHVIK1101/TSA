@@ -28,8 +28,10 @@
     box-shadow: 2.5px 5px 12px #0f0f0f90;
   }
 
-  .about-us-image img:hover{
-    transform: scale(1.05);
+.about-us-image img:hover{
+    transform: scale(1.025);
+    transition: transform 0.75s ease, box-shadow 0.75s ease;
+    box-shadow: 5px 10px 25px #0f0f0f90;
 }
 
 .about-us-text {

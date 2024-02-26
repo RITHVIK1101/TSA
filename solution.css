@@ -1,0 +1,92 @@
+.solution-container {
+    background-color: #ffffff;
+}
+
+.solution-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.solution-text {
+    color: #666666;
+    text-align: left; 
+}
+
+.solution-text h2 {
+    font-size: 3.1em;
+    color: #304530;
+    position: relative;
+}
+
+.solution-text h2::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: #304530;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+}
+
+.soluion-text p {
+    font-size: 1.25em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.solution-column {
+    background-color: #ffffff;
+    padding-bottom: 5%;
+}
+
+.solution-column-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.solution-graph{
+    flex: 1;
+    padding-top: 0%;
+    position: relative;
+}
+
+.solution-graph img {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.75s ease, box-shadow 0.75s ease;
+    box-shadow: 2.5px 5px 12px #0f0f0f90;
+}
+
+ .solution-graph img:hover {
+    transform: scale(1.025);
+    box-shadow:5px 10px 25px #0f0f0f90;
+}
+
+.solution-column-text {
+    flex: 1;
+    color: #666666; /* Grey text color */
+}
+
+.solution-column-text h2 {
+    font-size: 3.1em;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    background-image: linear-gradient(to right, #006400 40%, #003300 90%); /* Brown to Orange to Green gradient */
+    -webkit-background-clip: text; /* Apply background to the text */
+    color: transparent;
+}
+
+.solution-column-text p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}

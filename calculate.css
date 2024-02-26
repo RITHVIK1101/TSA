@@ -59,8 +59,8 @@
   .carbon-footprint-header {
     text-align: center;
     font-size: 3em;
-    background-image: linear-gradient(to right, #964B00 5%, #FFA500 10%, #006400 60%, #003300 90%); /* Brown to Orange to Green gradient */
-    -webkit-background-clip: text; /* Apply background to the text */
+    background-image: linear-gradient(to right, #026932c3 5%, #06a713ca 10%, #05d168c8 60%, #027224c9 90%);
+    -webkit-background-clip: text;
     color: transparent;
   }
   .image-column {
@@ -74,12 +74,13 @@
     border-radius: 10px;
     max-width: 580px;
     height: auto;
-    transition: transform 0.5s ease;
+    transition: transform 0.75s ease, box-shadow 0.75s ease;
     box-shadow: 2.5px 5px 12px #1d1d1d90;
   }
 
   .rounded-image:hover{
-    transform: scale(1.05);
+    transform: scale(1.025);
+    box-shadow: 5px 10px 25px #0f0f0f90;
   }
 
   #result {

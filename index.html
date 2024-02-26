@@ -52,17 +52,6 @@
       <h1>Green <br>energy<br> made <br>easy.</h1>
     </div>
    </section> 
-   <script> // fade out as you scroll down
-    window.addEventListener('scroll', function() {
-      var scrollPosition = window.scrollY;
-      var textOverlay = document.querySelector('.text-overlay');
-      var opacity = 1 - (scrollPosition / (window.innerHeight / 2));
-      textOverlay.style.opacity = opacity;
-      var videoBackground = document.getElementById('video-background');
-      var blurAmount = (scrollPosition / (window.innerHeight / 2)) * 2; // Adjust the blur intensity as needed
-      videoBackground.style.filter = 'blur(' + blurAmount + 'px)';
-    });
-  </script>
 
   <section class="about-us-section">
     <div class="about-us-content">
@@ -242,7 +231,7 @@
       <div class="footer-column">
         <h3>Sections</h3>
         <p><a href="#about">About Us</a></p>
-        <p><a href="#solutions">Solutions</a></p>
+        <p><a href="solutions.html">Solutions</a></p>
         <p><a href="#tax-incentives">Tax Incentives</a></p>
         <p><a href="#blog">Blog</a></p>
       </div>
@@ -261,6 +250,7 @@
 
   <script src ="script.js"></script>
   <script src ="calculatefootprint.js"></script>
+  <script src ="intro-animation.js"></script>
 
 </body>
 </html>
