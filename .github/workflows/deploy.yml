@@ -1,0 +1,28 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - temp  # Change this to your main branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11.3'  # Change this to your Python version
+      
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt  # Replace with your command to install Python dependencies
+
+    - name: Deploy website
+      run: |
+        # Replace this with your deployment script/command
+        python deploy_script.py
