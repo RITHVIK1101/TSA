@@ -7,102 +7,108 @@
   <link rel="stylesheet" href="intro.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="solution.css">
+  <link rel="stylesheet" href="wind-solution.css">
+  <link rel="stylesheet" href="button-overlay.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <title>Wind Energy</title>
 </head>
+
 <nav class="navbar">
-  <div class="logo">
-    <img src="logo.png" alt="Logo">
-</div>
+  <a href="index.html">
+    <div class="logo">
+        <img src="imgs/logo.png" alt="Logo">
+    </div>
+</a>
 <ul class="menu">
-  <li class="menu-item"><a href="index.html">HOME</a></li>
   <li class="menu-item"><a href="about-us.html">ABOUT US</a></li>
- 
   <li class="menu-item dropdown">
     <a href="#">SOLUTIONS</a>
-    <div class="dropdown-content">
-        <a href="wind.html">Wind Energy</a>
-        <a href="solar.html">Solar Energy</a>
-        <a href="biomass.html">Biomass Energy</a>
-        <a href="heat-pump.html">Heat Pumps</a>
+    <div class="dropdown-content solution-dropdown"> <!-- Added a specific class for the dropdown under Solutions -->
+      <a href="wind.html">Wind Energy</a>
+      <a href="solar.html">Solar Energy</a>
+      <a href="biomass.html">Biomass Energy</a>
+      <a href="heat-pump.html">Heat Pumps</a>
     </div>
-</li>
+  </li>
   <li class="menu-item"><a href="#">TAX INCENTIVES</a></li>
-  <li class="menu-item"><a href="file:///Users/rithviksaba/Desktop/quick/vari.html">ACCOUNT</a></li>
+  <li class="menu-item"><a href="login.html">ACCOUNT</a></li>
   <li class="menu-item"><a href="#">BLOG</a></li>
   <li class="menu-item dropdown">
-      <a href="#">TSA</a>
-      <div class="dropdown-content">
-          <a href="pdfs/student-copyright-checklist.pdf">Copyright Checklist</a>
-              <a href="pdfs/plan-of-work-log.pdf">Work Log</a>
+    <a href="#">TSA</a>
+    <div class="dropdown-content tsa-dropdown">
+      <a href="pdfs/Pix student-copyright-checklist (1).pdf">Copyright Checklist</a>
+          <a href="pdfs/plan-of-work-log.pdf">Work Log</a>
           <a href="#">Sources</a>
-          <a href="#">Branding Guidelines</a>
-      </div>
+          <a href="pdfs/Branding_Guidelines_1.pdf">Branding Guidelines</a>
+    </div>
   </li>
 </ul>
 </nav>
+
   <section class = "intro-section">
     <video autoplay muted loop id="video-background">
-      <source src="wind-bg.mp4" type="video/mp4">
+      <source src="imgs/wind-bg.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
     <div class="text-overlay">
       <h1>Wind energy<br>⌄</h1>
     </div>
-   </section> 
+   </section>
+
+  <section class = "top-divider"></section>
 
   <section class="solution-container">
     <div class="solution-content">
         <div class ="solution-text">
             <h2>What is Wind Energy?</h2>
-            <p>Wind power is the use of wind energy to generate useful work. 
-                Historically, wind power was used by sails, windmills and windpumps, but today it is mostly used to generate electricity. 
-                This article deals only with wind power for electricity generation. Today, wind power is generated almost completely with wind turbines, generally grouped into wind farms and connected to the electrical grid.
+            <p>
+              One potential solution for generating electricity within homes involves taking advantage of  wind. Turbines, similar to those used on wind farms though of smaller size, can be implemented in homes as a source of energy, by either attaching them to poles or directly into a building. This method would rely on using the movement of air to rotate the wind turbine’s blades to produce electricity. Overall, utilizing a wind turbine can help provide clean energy at a reduced cost for homeowners. 
             </p>
-            <p>In 2022, wind supplied over 2000 TWh of electricity, which was over 7% of world electricity and about 2% of world energy.
-                 With about 100 GW added during 2021, mostly in China and the United States, global installed wind power capacity exceeded 800 GW. 
-                 To help meet the Paris Agreement goals to limit climate change, analysts say it should expand much faster - by over 1% of electricity generation per year.
+            <p>
+              As of 2022, wind energy contributed over 2000 terawatt-hours (TWh) of electricity, representing more than 7% of global electricity production and approximately 2% of total global energy consumption. The continuous expansion of wind power capacity, with over 100 gigawatts (GW) added in 2021 alone, has pushed global installed wind power capacity beyond 800 GW.
             </p>
+            <br><br>
         </div>
+    </div>
+  </section>
+
+  <section class="solution-desc-container">
+    <div class="left-column">
+      <div class="solution-box" id="box1">
+        <h2>Turbine Blades</h2>
+        <p>Most turbines have three blades which are made mostly of fiberglass. Turbine blades vary in size, but a typical modern land-based wind turbine has blades of over 170 feet</p>
+      </div>
+      <div class="solution-box" id="box2">
+        <h2>Drivetrain</h2>
+        <p>The drivetrain on a turbine is comprised of the rotor, main shaft, gearbox, and generator. The drivetrain converts the low-speed, high-torque rotation of the turbine's rotor into electrical energy. </p>
+      </div>
+      <div class="solution-box" id="box3">
+        <h2>Turbine Beam</h2>
+        <p>Beam holds the blades and drivetrain in place. Some turbines extend up to 300 feet in the air. Smaller home turbines extend only a few yards in the air.</p>
+      </div>
+    </div>
+    <div class="right-column">
+      <img src="imgs/wind-turbine.jpg" alt="Turbine Image" class="turbine-img">
+      <div class="button-overlay" id="button1"></div>
+      <div class="button-overlay" id="button2"></div>
+      <div class="button-overlay" id="button3"></div>
     </div>
   </section>
 
   <section class="solution-column">
     <div class="solution-column-content">
         <div class="solution-graph">
-            <img src="wind-graph.png" alt="Wind Generation">
+            <img src="imgs/wind-graph.jpg" alt="Wind Generation">
         </div>
         <div class="solution-column-text">
-            <p>Wind power is considered a sustainable, renewable energy source, and has a much smaller impact on the environment compared to burning fossil fuels.
-                Wind power is variable, so it needs energy storage or other dispatchable generation energy sources to attain a reliable supply of electricity. Land-based (onshore) wind farms have a greater visual impact on the landscape than most other power stations per energy produced.
-                Wind farms sited offshore have less visual impact and have higher capacity factors, although they are generally more expensive.Offshore wind power currently has a share of about 10% of new installations.
+            <p>
+              Since a wind turbine's ability to produce electricity is reliant on the weather, this solution might be more effective in some places than others. 
+              Even in areas that may experience frequently windy conditions, it is important to consider factors such as which directions wind generally blows in as well as positioning the windmill in a way where it is not obstructed by anything such as trees or other buildings.
             </p>
             <p>
-                Wind power is one of the lowest-cost electricity sources per unit of energy produced. In many locations, new onshore wind farms are cheaper than new coal or gas plants.
-                Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible.
-            </p>
+              It is recommended that the installation of a small wind turbine is performed by professionals with expertise and credibility in the field. On the consumer's end, there might be some maintenance involved for the turbine including checking and tightening bolts or electrical connections, checking machines for corrosion, and replacing components of the turbine such as the blades. If all of this is done properly, the system should last for at least 20 years. 
             <p>
-                Regions in the higher northern and southern latitudes have the highest potential for wind power.
-                In most regions, wind power generation is higher in nighttime, and in winter when solar power output is low. For this reason, combinations of wind and solar power are suitable in many countries.
-            </p>
-        </div>
-    </div>
-  </section>
-
-  <section class="solution-container">
-    <div class="solution-content">
-        <div class ="solution-text">
-            <h2>How to get Wind Energy</h2>
-            <p>Wind power is the use of wind energy to generate useful work. 
-                Historically, wind power was used by sails, windmills and windpumps, but today it is mostly used to generate electricity. 
-                This article deals only with wind power for electricity generation. Today, wind power is generated almost completely with wind turbines, generally grouped into wind farms and connected to the electrical grid.
-            </p>
-            <p>In 2022, wind supplied over 2000 TWh of electricity, which was over 7% of world electricity and about 2% of world energy.
-                 With about 100 GW added during 2021, mostly in China and the United States, global installed wind power capacity exceeded 800 GW. 
-                 To help meet the Paris Agreement goals to limit climate change, analysts say it should expand much faster - by over 1% of electricity generation per year.
-            </p>
         </div>
     </div>
   </section>
@@ -111,18 +117,33 @@
     <div class="solution-content">
         <div class ="solution-text">
             <h2>What does it cost?</h2>
-            <p>Wind power is the use of wind energy to generate useful work. 
-                Historically, wind power was used by sails, windmills and windpumps, but today it is mostly used to generate electricity. 
-                This article deals only with wind power for electricity generation. Today, wind power is generated almost completely with wind turbines, generally grouped into wind farms and connected to the electrical grid.
+            <p>
+              The way a turbine operates is through the wind which causes its blades to spin, thus rotating the rotor within which subsequently spins a generator to produce electricity. Depending on the size and specifications of the wind turbines in question, the amount of electricity generated may vary significantly. According to some estimates for example, a wind turbine with a range between five to 15 kilowatts can help meet the needs of a standard home, which uses approximately 10,649 kilowatt-hours of electricity annually. 
             </p>
-            <p>In 2022, wind supplied over 2000 TWh of electricity, which was over 7% of world electricity and about 2% of world energy.
-                 With about 100 GW added during 2021, mostly in China and the United States, global installed wind power capacity exceeded 800 GW. 
-                 To help meet the Paris Agreement goals to limit climate change, analysts say it should expand much faster - by over 1% of electricity generation per year.
+            <p>
+              Industrial wind turbines typically cost in the $2-4 million dollar range.
+              However, smaller turbines can now cost no more than a few thousand dollars, but energy production will vary greatly to the size, specs and wind conditions of a person's home.
+              Maintenance costs can vary depending on the size of the turbine but they typically run $40-50,000 for larger turbines and in the hundreds of dollars for smaller turbines.
+            </p>
+            <p>
+              Keep in mind that factors like site suitability, local regulations (zoning laws), and access to incentives or rebates can further influence the overall financial feasibility of wind energy adoption for homeowners. Despite these costs, wind energy offers the potential for sustainable and environmentally friendly power generation, contributing to reduced reliance on traditional fossil fuels.
+            </p>
+            <p>
+              For more information, don't forget to click <a href =  https://www.epa.gov/statelocalenergy/state-renewable-energy-wind style = "text-decoration: none; color: green;">here</a> to view more articles published by the Environmental Protection Agency.
             </p>
         </div>
     </div>
   </section>
 
+  <section class="website">
+    <!-- Image of the website -->
+    <img src="imgs/wind-energy-screenshot.jpg" alt="Website Image" class="website-image">
+
+    <!-- Buy Now button -->
+    <a href="https://windandsolar.com/missouri-freedom-48-volt-mppt-kit/" class="buy-now-button">Buy Now</a>
+  </section>
+
+  <section class = "bottom-divider"></section>
 
   <footer class="footer">
     <div class="footer-container">
@@ -132,25 +153,21 @@
           offering detailed insights into their workings, installation processes, and benefits. 
           Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible. 
         </p>
-        <div class="social-icons">
-          <a href="https://twitter.com"><img src="x-logo.webp" alt="Twitter"></a>
-          <a href="https://facebook.com"><img src="facebook-icon.png" alt="Facebook"></a>
-          <a href="https://instagram.com"><img src="instagram-logo.png" alt="Instagram"></a>
-        </div>
+        
       </div>
       <div class="footer-column">
         <h3>Sections</h3>
-        <p><a href="#about">About Us</a></p>
-        <p><a href="#solutions">Solutions</a></p>
+        <p><a href="about-us.html">About Us</a></p>
+        <p><a href="index.html">Solutions</a></p>
         <p><a href="#tax-incentives">Tax Incentives</a></p>
-        <p><a href="#blog">Blog</a></p>
+        <p><a href="#">Blog</a></p>
       </div>
       <div class="footer-column">
         <h3>Links</h3>
-        <p><a href="#copyright">Copyright Checklist</a></p>
-        <p><a href="#worklog">Work Log</a></p>
+        <p><a href="pdfs/Pix student-copyright-checklist (1).pdf">Copyright Checklist</a></p>
+        <p><a href="pdfs/plan-of-work-log.pdf">Work Log</a></p>
         <p><a href="#sources">Sources</a></p>
-        <p><a href="#branding">Branding Guidelines</a></p>
+        <p><a href="pdfs/Branding_Guidelines_1.pdf">Branding Guidelines</a></p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -165,7 +182,6 @@
   <script src ="script.js"></script>
   <script src ="intro-animation.js"></script>
   <script src ="progress-bar.js"></script>
-  <script src ="calculatefootprint.js"></script>
-
+  <script src ="button-overlay.js"></script>
 </body>
 </html>

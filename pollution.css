@@ -2,12 +2,10 @@
     background-image: url('imgs/marek-piwnicki-WiZOyYqzUss-unsplash.jpg');
     background-size: cover; /* Adjust background size as needed */
     background-position: center; /* Center the background image */
-    
     height: 100vh;
     width: 100%; /* Adjust width as needed */
     padding-bottom: 2.5%;
 }
-
 
 .pollution-overlay {
     display: flex;
@@ -17,26 +15,28 @@
     background-color: rgba(15, 15, 15, 0.225); /* Adjust the background color and opacity as needed */
 }
 
-.pollution-image{
+.pollution-image {
     flex: 1;
-    padding-left: 5%;
-    padding-top: 10%;
+    padding-right: 2%; /* Adjust padding to move the image more to the right */
+    padding-top: 15%;
+    padding-bottom: 8%;
+    display: flex;
+    justify-content: flex-end; /* Align the image to the right */
 }
 
 .pollution-image img {
-    max-width: 580px;
-    height: auto;
+    max-width: 32em;
+    height: 28em;
     display: block;
     border-radius: 10px;
     transition: transform 0.5s ease;
     box-shadow: 2.5px 5px 12px #0f0f0f90;
-    margin-right: 5em;
-    margin-top: 5em;
-    filter: brightness(80%); /* Adjust brightness percentage as needed (80% used here) */
+    margin-right: 4em;
+    filter: brightness(90%); /* Adjust brightness percentage as needed (80% used here) */
     opacity: 90%;
 }
 
-.pollution-image img:hover{
+.pollution-image img:hover {
     transform: scale(1.025);
     transition: transform 0.75s ease, box-shadow 0.75s ease;
     box-shadow: 5px 10px 25px #0f0f0f90;
@@ -44,23 +44,21 @@
 
 .pollution-text {
     flex: 1;
-    
-    margin-top: 22vh;
-    margin-left: 6%;
+    margin-top: 8vh;
+    margin-left: 5.5%;
+    max-width: 50%; /* Adjust the maximum width as needed */
 }
-.pollution-text p{
-    font-size: 1em;
-    color:white;
 
-}
 .pollution-text h2 {
-   color:transparent;
-   color:rgba(249, 246, 246, 0.982);
-   font-size: 4em;
+    color: rgba(249, 246, 246, 0.982);
+    font-size: 4em;
+    margin-bottom: 10px; /* Reduce the bottom margin */
 }
 
 .pollution-text p {
     font-size: 1.25em;
     line-height: 1.6;
     margin-bottom: 15px; /* Adjust margin as needed */
+    color: white;
+    filter: brightness(180%); /* Adjust brightness percentage as needed (80% used here) */
 }

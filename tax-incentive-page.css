@@ -1,0 +1,23 @@
+.tax-incentive-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+    gap: 20px; /* Gap between cards */
+    padding: 20px;
+}
+
+.energy-source-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.energy-source-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.energy-source-card p {
+    font-size: 16px;
+    color: #666;
+}

@@ -7,87 +7,109 @@
   <link rel="stylesheet" href="intro.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="solution.css">
+  <link rel="stylesheet" href="solar-solution.css">
+  <link rel="stylesheet" href="button-overlay.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <title>Solar Energy</title>
 </head>
+
 <nav class="navbar">
-  <div class="logo">
-    <img src="logo.png" alt="Logo">
-</div>
+  <a href="index.html">
+    <div class="logo">
+        <img src="imgs/logo.png" alt="Logo">
+    </div>
+</a>
 <ul class="menu">
-  <li class="menu-item"><a href="index.html">HOME</a></li>
   <li class="menu-item"><a href="about-us.html">ABOUT US</a></li>
- 
   <li class="menu-item dropdown">
     <a href="#">SOLUTIONS</a>
-    <div class="dropdown-content">
-        <a href="wind.html">Wind Energy</a>
-        <a href="solar.html">Solar Energy</a>
-        <a href="biomass.html">Biomass Energy</a>
-        <a href="heat-pump.html">Heat Pumps</a>
+    <div class="dropdown-content solution-dropdown"> <!-- Added a specific class for the dropdown under Solutions -->
+      <a href="wind.html">Wind Energy</a>
+      <a href="solar.html">Solar Energy</a>
+      <a href="biomass.html">Biomass Energy</a>
+      <a href="heat-pump.html">Heat Pumps</a>
     </div>
-</li>
+  </li>
   <li class="menu-item"><a href="#">TAX INCENTIVES</a></li>
-  <li class="menu-item"><a href="file:///Users/rithviksaba/Desktop/quick/vari.html">ACCOUNT</a></li>
+  <li class="menu-item"><a href="login.html">ACCOUNT</a></li>
   <li class="menu-item"><a href="#">BLOG</a></li>
   <li class="menu-item dropdown">
-      <a href="#">TSA</a>
-      <div class="dropdown-content">
-          <a href="pdfs/student-copyright-checklist.pdf">Copyright Checklist</a>
-              <a href="pdfs/plan-of-work-log.pdf">Work Log</a>
+    <a href="#">TSA</a>
+    <div class="dropdown-content tsa-dropdown">
+      <a href="pdfs/Pix student-copyright-checklist (1).pdf">Copyright Checklist</a>
+          <a href="pdfs/plan-of-work-log.pdf">Work Log</a>
           <a href="#">Sources</a>
-          <a href="#">Branding Guidelines</a>
-      </div>
+          <a href="pdfs/Branding_Guidelines_1.pdf">Branding Guidelines</a>
+    </div>
   </li>
 </ul>
 </nav>
+
   <section class = "intro-section">
     <video autoplay muted loop id="video-background">
-      <source src="solar-bg.mp4" type="video/mp4">
+      <source src="imgs/solar-bg.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
-    <!-- Text overlay container -->
     <div class="text-overlay">
       <h1>Solar Energy<br>⌄</h1>
     </div>
-   </section> 
+   </section>
+
+  <section class = "top-divider"></section>
 
   <section class="solution-container">
     <div class="solution-content">
         <div class ="solution-text">
             <h2>What is Solar Energy?</h2>
-            <p>Wind power is the use of wind energy to generate useful work. 
-                Historically, wind power was used by sails, windmills and windpumps, but today it is mostly used to generate electricity. 
-                This article deals only with wind power for electricity generation. Today, wind power is generated almost completely with wind turbines, generally grouped into wind farms and connected to the electrical grid.
+            <p>
+              Through the use of solar panels, energy originating from the sun can be used to power homes. This solution involves the use of specialized panels installed on the roof of a house which capture rays from the sun. Photovoltaic cells within the solar panels generate electrical charges thus converting sunlight into a usable form of energy. 
             </p>
-            <p>In 2022, wind supplied over 2000 TWh of electricity, which was over 7% of world electricity and about 2% of world energy.
-                 With about 100 GW added during 2021, mostly in China and the United States, global installed wind power capacity exceeded 800 GW. 
-                 To help meet the Paris Agreement goals to limit climate change, analysts say it should expand much faster - by over 1% of electricity generation per year.
+            <p>
+              The Earth's capacity to harness solar energy is immense, with an estimated absorption of approximately 122 petawatts per year, equivalent to 3,850,000 exajoules annually. This staggering figure underscores the vast potential of solar energy as a renewable resource that can power our planet sustainably. Remarkably, as of 2002 (2019), the energy absorbed from the sun in just one hour surpassed the total energy consumption of the entire world for an entire year, highlighting the abundance and potency of solar energy.
             </p>
+            <p>
+              According to the <a href =  "https://www.eia.gov/todayinenergy/detail.php?id=50357" style = "text-decoration: none; color: green;">US Energy Information Administration</a>, solar power accounted for 3% of U.S. electricity generation from all sources in 2020. However, it is projected that solar generation will make up 14% of the U.S. total in 2035 and 20% in 2050. This has been fueled in part by falling installation costs and increased interest in solar energy.
+            </p>
+            <br><br>
         </div>
+    </div>
+  </section>
+
+  <section class="solution-desc-container">
+    <div class="left-column">
+      <div class="solution-box" id="box1">
+        <h2>Solar Panels</h2>
+        <p>
+          Photovoltaic modules consist of a large number of solar cells made of 75% glass and smaller wafer-based crystalline silicon cells. 
+        </p>
+      </div>
+      <div class="solution-box" id="box2">
+        <h2>Steel Mount</h2>
+        <p>
+          Consist of pole mounts, which are driven directly into the ground/embedded in concrete or roof-mounted solar power systems which consist of solar modules held in place by racks or frames attached to roof-based mounting supports.
+        </p>
+      </div>
+    </div>
+    <div class="right-column">
+      <img src="imgs/solar-panel.jpg" alt="Solar Panel Image" class="solar-img">
+      <div class="button-overlay" id="button1"></div>
+      <div class="button-overlay" id="button2"></div>
     </div>
   </section>
 
   <section class="solution-column">
     <div class="solution-column-content">
         <div class="solution-graph">
-            <img src="wind-graph.png" alt="Wind Generation">
+            <img src="imgs/solar-graph.jpg" alt="Solar Generation">
         </div>
         <div class="solution-column-text">
-            <p>Wind power is considered a sustainable, renewable energy source, and has a much smaller impact on the environment compared to burning fossil fuels.
-                Wind power is variable, so it needs energy storage or other dispatchable generation energy sources to attain a reliable supply of electricity. Land-based (onshore) wind farms have a greater visual impact on the landscape than most other power stations per energy produced.
-                Wind farms sited offshore have less visual impact and have higher capacity factors, although they are generally more expensive.Offshore wind power currently has a share of about 10% of new installations.
+            <p>
+              One factor to consider with solar power is the reliance on energy from the sun. While solar panels can still function to some extent during the night time or under cloudy conditions, they would not generate as much power as they would during a sunnier day. As a result, their effectiveness may vary somewhat throughout different regions of the world or even seasonally. Furthermore, the direction that the roof of a house points would also impact how much solar power can be produced, based on the angle that the sun is facing. However, energy generated from solar panels can also be stored in batteries for later use even at night, making it highly beneficial in areas where weather permits.
             </p>
             <p>
-                Wind power is one of the lowest-cost electricity sources per unit of energy produced. In many locations, new onshore wind farms are cheaper than new coal or gas plants.
-                Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible.
-            </p>
+              <a href = "https://www.energysage.com/solar/solar-panel-installation-guide-what-should-you-expect/" style = "text-decoration: none; color: green;">The process of installing solar panels</a> is often performed by qualified installers, and includes obtaining specific permits. Prior to the actual installation, it is necessary that a house is evaluated to determine whether it is advisable for that home to begin utilizing solar power. Once this analysis concludes, the attachment and connections of the solar panel to the home's electrical circuitry begin, with this step usually taking only a few days.
             <p>
-                Regions in the higher northern and southern latitudes have the highest potential for wind power.
-                In most regions, wind power generation is higher in nighttime, and in winter when solar power output is low. For this reason, combinations of wind and solar power are suitable in many countries.
-            </p>
         </div>
     </div>
   </section>
@@ -95,19 +117,32 @@
   <section class="solution-container">
     <div class="solution-content">
         <div class ="solution-text">
-            <h2>How to get Wind Energy</h2>
-            <p>Wind power is the use of wind energy to generate useful work. 
-                Historically, wind power was used by sails, windmills and windpumps, but today it is mostly used to generate electricity. 
-                This article deals only with wind power for electricity generation. Today, wind power is generated almost completely with wind turbines, generally grouped into wind farms and connected to the electrical grid.
+            <h2>What does it cost?</h2>
+            <p>
+              Solar panels can be costly to install, and prices vary based on where you live, the size of the system, the type of solar panels, and rebates offered in the state. 
+              They usually cost around $17,500 to $24,640, although ultimately they prove very effective in reducing the cost of electricity in homes. 
             </p>
-            <p>In 2022, wind supplied over 2000 TWh of electricity, which was over 7% of world electricity and about 2% of world energy.
-                 With about 100 GW added during 2021, mostly in China and the United States, global installed wind power capacity exceeded 800 GW. 
-                 To help meet the Paris Agreement goals to limit climate change, analysts say it should expand much faster - by over 1% of electricity generation per year.
+            <p>
+              Keep in mind the figure presented earlier only applies to the average house. Solar panels cost between $2.40 and $3.60 per watt including installation, so how much you pay for your system depends on how many watts you need to keep your home powered.
+              Local and state incentives can make a difference in the cost of your solar panel system too. For example, some local governments offer incentive programs that can reduce the cost of your solar panels by $2,500 or more.
+              On an average $18,150 solar panel system, you'll save approximately $5,400 on your solar panels, putting your final price at around $12,700.
+            </p>
+            <p>
+              For more information, click <a href =  "https://www.epa.gov/statelocalenergy/local-renewable-energy-solar" style = "text-decoration: none; color: green;">here</a> to view more articles published by the Environmental Protection Agency.
             </p>
         </div>
     </div>
   </section>
 
+  <section class="website">
+    <!-- Image of the website -->
+    <img src="imgs/solar-energy-screenshot.jpg" alt="Website Image" class="website-image">
+
+    <!-- Buy Now button -->
+    <a href="https://generationecostore.com/products/sungold-power-off-grid-solar-kit-15000w-48vdc-120v-240v-lifepo4-20-48kwh-lithium-battery-18-x-415-watts-solar-panels-sgr-15k20e?currency=USD&utm_medium=cpc&utm_source=google&utm_campaign=Google%20Shopping&stkn=6ef9ee33f837" class="buy-now-button">Buy Now</a>
+  </section>
+
+  <section class = "bottom-divider"></section>
 
   <footer class="footer">
     <div class="footer-container">
@@ -117,11 +152,7 @@
           offering detailed insights into their workings, installation processes, and benefits. 
           Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible. 
         </p>
-        <div class="social-icons">
-          <a href="https://twitter.com"><img src="x-logo.webp" alt="Twitter"></a>
-          <a href="https://facebook.com"><img src="facebook-icon.png" alt="Facebook"></a>
-          <a href="https://instagram.com"><img src="instagram-logo.png" alt="Instagram"></a>
-        </div>
+       
       </div>
       <div class="footer-column">
         <h3>Sections</h3>
@@ -150,7 +181,6 @@
   <script src ="script.js"></script>
   <script src ="intro-animation.js"></script>
   <script src ="progress-bar.js"></script>
-  <script src ="calculatefootprint.js"></script>
-
+  <script src ="button-overlay.js"></script>
 </body>
 </html>

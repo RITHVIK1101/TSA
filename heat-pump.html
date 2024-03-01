@@ -7,123 +7,149 @@
   <link rel="stylesheet" href="intro.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="solution.css">
+  <link rel="stylesheet" href="heat-pump-solution.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <title>Heat-pump Energy</title>
+  <title>Heat Pumps</title>
 </head>
+
 <nav class="navbar">
-  <div class="logo">
-    <img src="logo.png" alt="Logo">
-</div>
+  <a href="index.html">
+    <div class="logo">
+        <img src="imgs/logo.png" alt="Logo">
+    </div>
+</a>
 <ul class="menu">
-  <li class="menu-item"><a href="index.html">HOME</a></li>
   <li class="menu-item"><a href="about-us.html">ABOUT US</a></li>
- 
   <li class="menu-item dropdown">
     <a href="#">SOLUTIONS</a>
-    <div class="dropdown-content">
-        <a href="wind.html">Wind Energy</a>
-        <a href="solar.html">Solar Energy</a>
-        <a href="biomass.html">Biomass Energy</a>
-        <a href="heat-pump.html">Heat Pumps</a>
+    <div class="dropdown-content solution-dropdown"> <!-- Added a specific class for the dropdown under Solutions -->
+      <a href="wind.html">Wind Energy</a>
+      <a href="solar.html">Solar Energy</a>
+      <a href="biomass.html">Biomass Energy</a>
+      <a href="heat-pump.html">Heat Pumps</a>
     </div>
-</li>
+  </li>
   <li class="menu-item"><a href="#">TAX INCENTIVES</a></li>
-  <li class="menu-item"><a href="file:///Users/rithviksaba/Desktop/quick/vari.html">ACCOUNT</a></li>
+  <li class="menu-item"><a href="login.html">ACCOUNT</a></li>
   <li class="menu-item"><a href="#">BLOG</a></li>
   <li class="menu-item dropdown">
-      <a href="#">TSA</a>
-      <div class="dropdown-content">
-          <a href="pdfs/student-copyright-checklist.pdf">Copyright Checklist</a>
-              <a href="pdfs/plan-of-work-log.pdf">Work Log</a>
+    <a href="#">TSA</a>
+    <div class="dropdown-content tsa-dropdown">
+      <a href="pdfs/Pix student-copyright-checklist (1).pdf">Copyright Checklist</a>
+          <a href="pdfs/plan-of-work-log.pdf">Work Log</a>
           <a href="#">Sources</a>
-          <a href="#">Branding Guidelines</a>
-      </div>
+          <a href="pdfs/Branding_Guidelines_1.pdf">Branding Guidelines</a>
+    </div>
   </li>
 </ul>
 </nav>
+
   <section class = "intro-section">
-    <video autoplay muted loop id="video-background">
-      <source src="heat-pump-bg.mp4" type="video/mp4">
+    <video autoplay muted loop id="video-background" style = "transform: scale(1.15);">
+      <source src="imgs/heat-pump-bg.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
-    <!-- Text overlay container -->
     <div class="text-overlay">
-      <h1>Heat pumps<br>⌄</h1>
+      <h1>Heat Pumps<br>⌄</h1>
     </div>
-   </section> 
+   </section>
+
+  <section class = "top-divider"></section>
 
   <section class="solution-container">
     <div class="solution-content">
         <div class ="solution-text">
             <h2>What are Heat Pumps?</h2>
-            <p>Wind power is the use of wind energy to generate useful work. 
-                Historically, wind power was used by sails, windmills and windpumps, but today it is mostly used to generate electricity. 
-                This article deals only with wind power for electricity generation. Today, wind power is generated almost completely with wind turbines, generally grouped into wind farms and connected to the electrical grid.
+            <p>
+              Heat pumps are highly efficient heating and cooling systems that extract heat from the air, water, or ground and transfer it to indoor spaces for heating or remove it from indoor spaces for cooling. They work on the principle of thermodynamics and are widely used in residential, commercial, and industrial settings.
+              Because they transfer heat rather than generate heat, heat pumps can efficiently provide comfortable temperatures for your home. 
             </p>
-            <p>In 2022, wind supplied over 2000 TWh of electricity, which was over 7% of world electricity and about 2% of world energy.
-                 With about 100 GW added during 2021, mostly in China and the United States, global installed wind power capacity exceeded 800 GW. 
-                 To help meet the Paris Agreement goals to limit climate change, analysts say it should expand much faster - by over 1% of electricity generation per year.
+            <p>
+              There are three main types of heat pumps:  <a href = "https://www.energy.gov/energysaver/air-source-heat-pumps" style = "text-decoration: none; color: green;">Air Source Pumps</a> (The most common type which transfers heat between your house and the outside air), 
+              <a href = "https://www.energy.gov/energysaver/geothermal-heat-pumps" style = "text-decoration: none; color: green;">Geothermal Heat Pumps</a> (Transfers heat between your house and the ground or a nearby water source) and <a href = "https://www.energy.gov/energysaver/absorption-heat-pumps" style = "text-decoration: none; color: green;">Absorption Heat Pumps</a> (gas-fired heat pumps that use thermal energy as their energy source)
             </p>
+            <p>
+              Heat pumps stand out as a environmentally advantageous solution compared to traditional methods like furnaces and air conditioners due to their higher efficiency and utilization of renewable energy sources.
+              By extracting heat from the air, water, or ground, heat pumps minimize reliance on non-renewable fossil fuels, reducing carbon emissions.
+            </p> 
+            <br><br>
         </div>
+    </div>
+  </section>
+
+  <section class="solution-desc-container">
+    <div class="left-column">
+      <div class="solution-box" id="box1">
+        <h2>Fan</h2>
+        <p>
+          The outdoor unit contains a fan that blows air over the condenser coil, facilitating heat transfer.
+        </p>
+      </div>
+      <div class="solution-box" id="box2">
+        <h2>Compressor</h2>
+        <p>
+          The absorbed heat causes the refrigerant liquid to evaporate into a low-pressure gas inside the outdoor unit of the heat pump. 
+          The compressor within the heat pump then compresses the gaseous refrigerant, raising it's temperature and pressure.
+        </p>
+      </div>
+      <div class="solution-box" id="box3">
+        <h2>Refrigerant Lines</h2>
+        <p>The warmed indoor air is distributed throughout the building via a forced-air system, ductwork, or radiant heating, providing warmth to the living spaces.</p>
+      </div>
+    </div>
+    <div class="right-column">
+      <img src="imgs/heat-pump.jpg" alt="Heat Pump Image" class="heat-pump-img">
+      <div class="button-overlay" id="button1"></div>
+      <div class="button-overlay" id="button2"></div>
+      <div class="button-overlay" id="button3"></div>
     </div>
   </section>
 
   <section class="solution-column">
     <div class="solution-column-content">
         <div class="solution-graph">
-            <img src="wind-graph.png" alt="Wind Generation">
+            <img src="imgs/heat-pump-diagram.jpg" alt="Solar Generation">
         </div>
         <div class="solution-column-text">
-            <p>Wind power is considered a sustainable, renewable energy source, and has a much smaller impact on the environment compared to burning fossil fuels.
-                Wind power is variable, so it needs energy storage or other dispatchable generation energy sources to attain a reliable supply of electricity. Land-based (onshore) wind farms have a greater visual impact on the landscape than most other power stations per energy produced.
-                Wind farms sited offshore have less visual impact and have higher capacity factors, although they are generally more expensive.Offshore wind power currently has a share of about 10% of new installations.
+            <p>
+              It's important to note that since heat pumps primarily rely on electricity to power their operation, their environmental footprint depends on the source of electricity generation. When powered by renewable energy sources such as solar, wind, or hydroelectric power, heat pumps can operate with minimal carbon emissions, further enhancing their environmental benefits.
             </p>
             <p>
-                Wind power is one of the lowest-cost electricity sources per unit of energy produced. In many locations, new onshore wind farms are cheaper than new coal or gas plants.
-                Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible.
-            </p>
+              This being said, having heat pumps installed in your house is a relatively simple undertaking. It's best to research different types suitable for your home and consulting with HVAC professionals to assess your needs. Work with an HVAC contractor to secure necessary permits and ensure compliance with local regulations. Once preparations are complete, installation can begin, which involves connecting indoor and outdoor units, along with any ductwork. 
             <p>
-                Regions in the higher northern and southern latitudes have the highest potential for wind power.
-                In most regions, wind power generation is higher in nighttime, and in winter when solar power output is low. For this reason, combinations of wind and solar power are suitable in many countries.
-            </p>
         </div>
     </div>
   </section>
 
-  <section class="solution-container">
-    <div class="solution-content">
-        <div class ="solution-text">
-            <h2>How to get Wind Energy</h2>
-            <p>Wind power is the use of wind energy to generate useful work. 
-                Historically, wind power was used by sails, windmills and windpumps, but today it is mostly used to generate electricity. 
-                This article deals only with wind power for electricity generation. Today, wind power is generated almost completely with wind turbines, generally grouped into wind farms and connected to the electrical grid.
-            </p>
-            <p>In 2022, wind supplied over 2000 TWh of electricity, which was over 7% of world electricity and about 2% of world energy.
-                 With about 100 GW added during 2021, mostly in China and the United States, global installed wind power capacity exceeded 800 GW. 
-                 To help meet the Paris Agreement goals to limit climate change, analysts say it should expand much faster - by over 1% of electricity generation per year.
-            </p>
-        </div>
-    </div>
-  </section>
-
-  <section class="solution-container">
+  <section class="solution-container" style = "padding-bottom: 0%;">
     <div class="solution-content">
         <div class ="solution-text">
             <h2>What does it cost?</h2>
-            <p>Wind power is the use of wind energy to generate useful work. 
-                Historically, wind power was used by sails, windmills and windpumps, but today it is mostly used to generate electricity. 
-                This article deals only with wind power for electricity generation. Today, wind power is generated almost completely with wind turbines, generally grouped into wind farms and connected to the electrical grid.
+            <p>
+              The cost of heat pumps can vary in size depending on where you live, the size of the system, the type of system and cost of building permits in your local municipality.
+              Typically, Air-source heat pumps (the most common one) have a unit cost of $2,000-5,000 and an installation cost of $1,300-2,000.
+              More expensive heat pumps like a Geothermal heat pump can cost $3,000-$6,000 per unit and a hefty $10,000-$20,000 for installation.
+              Luckily, you can help reduce the cost of your heat pump installation with up to 30% ($2000) in tax credits.
             </p>
-            <p>In 2022, wind supplied over 2000 TWh of electricity, which was over 7% of world electricity and about 2% of world energy.
-                 With about 100 GW added during 2021, mostly in China and the United States, global installed wind power capacity exceeded 800 GW. 
-                 To help meet the Paris Agreement goals to limit climate change, analysts say it should expand much faster - by over 1% of electricity generation per year.
+            <p>
+              If you don't one already, you'll also have to install ductwork around your house to connect the inside and outside units. 
+              This can incur an additional $1,500-$8,000 depending on the size of your house. 
+              You may also have to pay for air duct cleaning if your ductwork hasn't received maintenance in a long time.
             </p>
         </div>
     </div>
   </section>
 
+  <section class="website">
+    <!-- Image of the website -->
+    <img src="imgs/heat-pump-screenshot.jpg" alt="Website Image" class="website-image">
+
+    <!-- Buy Now button -->
+    <a href="https://www.theacoutlet.com/gszc180361-3-ton-18-seer-goodman-heat-pump-condenser.html" class="buy-now-button">Buy Now</a>
+  </section>
+
+  <section class = "bottom-divider"></section>
 
   <footer class="footer">
     <div class="footer-container">
@@ -133,11 +159,7 @@
           offering detailed insights into their workings, installation processes, and benefits. 
           Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible. 
         </p>
-        <div class="social-icons">
-          <a href="https://twitter.com"><img src="x-logo.webp" alt="Twitter"></a>
-          <a href="https://facebook.com"><img src="facebook-icon.png" alt="Facebook"></a>
-          <a href="https://instagram.com"><img src="instagram-logo.png" alt="Instagram"></a>
-        </div>
+     
       </div>
       <div class="footer-column">
         <h3>Sections</h3>
@@ -166,7 +188,6 @@
   <script src ="script.js"></script>
   <script src ="intro-animation.js"></script>
   <script src ="progress-bar.js"></script>
-  <script src ="calculatefootprint.js"></script>
-
+  <script src ="button-overlay.js"></script>
 </body>
 </html>

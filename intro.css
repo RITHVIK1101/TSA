@@ -69,7 +69,7 @@
 
 .about-us-text h2 {
     font-size: 3.1em;
-    margin-bottom: 20px; /* Adjust margin as needed */
+    margin-bottom: 5px; /* Adjust margin as needed */
     background-image: linear-gradient(to right, #026932c3 5%, #06a713ca 10%, #05d168c8 60%, #027224c9 90%); /* Brown to Orange to Green gradient */
     -webkit-background-clip: text; /* Apply background to the text */
     color: transparent;

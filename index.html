@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="calculate.css">
   <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="another-section.css">
   <link rel="stylesheet" href="pollution.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,35 +21,38 @@
 
 <body>
   <nav class="navbar">
-    <div class="logo">
-      <img src="imgs/logo.png" alt="Logo">
-  </div>
+    <a href="index.html">
+      <div class="logo">
+          <img src="imgs/logo.png" alt="Logo">
+      </div>
+  </a>
   <ul class="menu">
     <li class="menu-item"><a href="about-us.html">ABOUT US</a></li>
     <li class="menu-item dropdown">
       <a href="#">SOLUTIONS</a>
-      <div class="dropdown-content">
-          <a href="wind.html">Wind Energy</a>
-          <a href="solar.html">Solar Energy</a>
-          <a href="biomass.html">Biomass Energy</a>
-          <a href="heat-pump.html">Heat Pumps</a>
+      <div class="dropdown-content solution-dropdown"> <!-- Added a specific class for the dropdown under Solutions -->
+        <a href="wind.html">Wind Energy</a>
+        <a href="solar.html">Solar Energy</a>
+        <a href="biomass.html">Biomass Energy</a>
+        <a href="heat-pump.html">Heat Pumps</a>
       </div>
-  </li>
+    </li>
     <li class="menu-item"><a href="#">TAX INCENTIVES</a></li>
-    <li class="menu-item"><a href="file:///Users/rithviksaba/Desktop/quick/vari.html">ACCOUNT</a></li>
+    <li class="menu-item"><a href="login.html">ACCOUNT</a></li>
     <li class="menu-item"><a href="#">BLOG</a></li>
     <li class="menu-item dropdown">
-        <a href="#">TSA</a>
-        <div class="dropdown-content">
-            <a href="pdfs/student-copyright-checklist.pdf">Copyright Checklist</a>
-                <a href="pdfs/plan-of-work-log.pdf">Work Log</a>
-            <a href="#">Sources</a>
-            <a href="#">Branding Guidelines</a>
-        </div>
+      <a href="#">TSA</a>
+      <div class="dropdown-content tsa-dropdown">
+        <a href="pdfs/Pix student-copyright-checklist (1).pdf">Copyright Checklist</a>
+          <a href="pdfs/plan-of-work-log.pdf">Work Log</a>
+          <a href="#">Sources</a>
+          <a href="pdfs/Branding_Guidelines_1.pdf">Branding Guidelines</a>
+      </div>
     </li>
-</ul>
+  </ul>
   </nav>
- 
+  
+  
 
   <section class = "intro-section">
     <video autoplay muted loop id="video-background">
@@ -73,6 +77,7 @@
             <p>Earthwise is an informational website committed to demystifying renewable energy solutions offering detailed insights into their workings, installation processes, and benefits.</p>
             <p>Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible.</p>
         </div>
+        
     </div>
   </section>
   <script>
@@ -107,15 +112,29 @@
 });
 
 </script>
-  
+<section class="another-section">
+  <div class="another-content">
+      <div class="another-heading animate">
+          <h2>What is Green Energy?</h2>
+      </div>
+      <div class="another-text animate">
+          <p>Green energy, also known as renewable energy, is derived from natural sources that are constantly replenished, such as sunlight, wind, rain, tides, waves, and geothermal heat. Unlike fossil fuels, which are finite and contribute to climate change, green energy sources are abundant and environmentally friendly.<br> Examples of green energy technologies include solar panels, wind turbines, hydroelectric dams, and geothermal power plants. By harnessing these renewable resources, we can reduce our reliance on fossil fuels, decrease greenhouse gas emissions, and mitigate the impacts of climate change.</p>
+      </div>
+  </div>
+</section>
+
+
+
   <!-- After the closing tag of the about-us-section -->
   <section class="pollution-section">
     <div class="pollution-overlay">
         
         <div class="pollution-text">
             <h2>Why Green Energy?</h2>
-            <p>Earthwise is an informational website committed to demystifying renewable energy solutions offering detailed insights into their workings, installation processes, and benefits.</p>
-            <p>Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible.</p>
+            <p>Global warming poses dire threats, intensifying extreme weather events and endangering ecosystems. The IPCC warns that fossil fuel dependence exacerbates this crisis.
+            </p>
+            <p>Enter green energy: a pivotal solution. Renewable sources like solar and wind power offer sustainable alternatives, slashing carbon emissions. In 2023, renewables fueled about 31% of global power expansion (IRENA).</p>
+            <p>The economic rewards are staggering. Each dollar invested in renewables yields triple economic returns (UNEP). Transitioning to green energy could annually save millions of lives by curbing air pollution-related illnesses (Global Commission on the Economy and Climate). By embracing renewable energy and resilient infrastructure, we combat global warming and secure a sustainable tomorrow.</p>
         </div>
  
         <div class="pollution-image">
@@ -351,11 +370,7 @@ document.addEventListener("DOMContentLoaded", function() {
           offering detailed insights into their workings, installation processes, and benefits. 
           Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible. 
         </p>
-        <div class="social-icons">
-          <a href="https://twitter.com"><img src="imgs/x-logo.webp" alt="Twitter"></a>
-          <a href="https://facebook.com"><img src="imgs/facebook-icon.png" alt="Facebook"></a>
-          <a href="https://instagram.com"><img src="imgs/instagram-logo.png" alt="Instagram"></a>
-        </div>
+      
       </div>
       <div class="footer-column">
         <h3>Sections</h3>

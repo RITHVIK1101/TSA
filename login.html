@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">
+          <div class="logo">
+              <img src="imgs/logo.png" alt="Logo">
+          </div>
+      </a>
+      <ul class="menu">
+        <li class="menu-item"><a href="about-us.html">ABOUT US</a></li>
+        <li class="menu-item dropdown">
+          <a href="#">SOLUTIONS</a>
+          <div class="dropdown-content solution-dropdown"> <!-- Added a specific class for the dropdown under Solutions -->
+            <a href="wind.html">Wind Energy</a>
+            <a href="solar.html">Solar Energy</a>
+            <a href="biomass.html">Biomass Energy</a>
+            <a href="heat-pump.html">Heat Pumps</a>
+          </div>
+        </li>
+        <li class="menu-item"><a href="#">TAX INCENTIVES</a></li>
+        <li class="menu-item"><a href="login.html">ACCOUNT</a></li>
+        <li class="menu-item"><a href="#">BLOG</a></li>
+        <li class="menu-item dropdown">
+          <a href="#">TSA</a>
+          <div class="dropdown-content tsa-dropdown">
+            <a href="pdfs/Pix student-copyright-checklist (1).pdf">Copyright Checklist</a>
+          <a href="pdfs/plan-of-work-log.pdf">Work Log</a>
+          <a href="#">Sources</a>
+          <a href="pdfs/Branding_Guidelines_1.pdf">Branding Guidelines</a>
+          </div>
+        </li>
+      </ul>
+      </nav>
+      
+    <div class="wrapper">
+        <div class="form-wrapper sign-in">
+            <form action="">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <button type="submit">Login</button>
+                <div class="signUp-link">
+                    <p>Don't have an account?<a href="#" class="signUpBtn-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+
+        
+        <div class="form-wrapper sign-up">
+            <form action="">
+                <h2>Sign Up</h2>
+                <div class="input-group">
+                    <input type="text" required id="fullName">
+                    <label for="fullName">Full Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required id="signupEmail">
+                    <label for="signupEmail">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required id="signupPassword">
+                    <label for="signupPassword">Password</label>
+                </div>
+                <button type="submit" id="signupBtn">Sign Up</button>
+                <div class="signUp-link">
+                    <p>Already have an account?<a href="#" class="signInBtn-link">Sign In</a></p>
+                </div>
+            </form>
+        </div> 
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC-9eTdswPzCtB4Xv9jtulZC1ST7S3Sq90",
+            authDomain: "clubs-dc55d.firebaseapp.com",
+            databaseURL: "https://clubs-dc55d-default-rtdb.firebaseio.com",
+            projectId: "clubs-dc55d",
+            storageBucket: "clubs-dc55d.appspot.com",
+            messagingSenderId: "703230626834",
+            appId: "1:703230626834:web:f0284113095a7868a59ccb",
+            measurementId: "G-GGDX6RJM3V"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const database = getDatabase();
+
+        
+        const signInForm = document.querySelector('.form-wrapper.sign-in form');
+        const signUpBtnLink = document.querySelector('.signUpBtn-link');
+        const signInBtnLink = document.querySelector('.signInBtn-link');
+        const wrapper = document.querySelector('.wrapper');
+
+        signUpBtnLink.addEventListener('click', () => {
+            wrapper.classList.toggle('active');
+            // Clear login form on switch
+            clearLoginForm();
+        });
+
+        signInBtnLink.addEventListener('click', () => {
+            wrapper.classList.toggle('active');
+            // Clear signup form on switch
+            clearSignupForm();
+        });
+        
+        
+
+        signUpForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const fullName = signUpForm.querySelector('#fullName').value;
+            const email = signUpForm.querySelector('#signupEmail').value;
+            const password = signUpForm.querySelector('#signupPassword').value;
+
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+
+                // Send email verification
+                await sendEmailVerification(userCredential.user);
+
+                // Store user data in the Realtime Database
+                const userRef = ref(database, 'users');
+                push(userRef, {
+                    username: fullName,
+                    email: email,
+                });
+
+                alert("Registration successful! Please check your email for verification."); // Display an alert
+                // You can redirect the user to another page here
+
+                // Clear signup form after successful registration
+                clearSignupForm();
+            } catch (error) {
+                console.error("Error during registration", error.message);
+                alert("Registration failed. Please try again."); // Display an alert
+            }
+        });
+
+        // Function to clear login form
+        function clearLoginForm() {
+            signInForm.reset();
+        }
+
+        // Function to clear signup form
+        function clearSignupForm() {
+            signUpForm.reset();
+        }
+    </script>
+</body>
+</html>

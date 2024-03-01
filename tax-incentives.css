@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.tax-incentives {
+    position: relative;
+}
+
+.background-image {
+    background-image: url('imgs/Designer\ \(3\).png');
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.313);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.state-dropdown {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-input {
+    position: absolute; /* Ensure the search input is positioned absolutely */
+    padding: 1.2em;
+    width: 40em;
+    border: 0.1em solid rgb(12, 10, 10);
+    border-radius: 1em;
+    font-size: 16px;
+    outline: none;
+    margin-top: 20em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.tax-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 23.5em;
+    width: 42em;
+    border-radius: 5px;
+    margin-left: -21em;
+    z-index: 1;
+}
+
+.tax-dropdown-content ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.tax-dropdown-content li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tax-dropdown-content li:hover {
+    background-color: #f2f2f2;
+}
+.search-input:focus + .tax-dropdown-content {
+    display: block;
+}

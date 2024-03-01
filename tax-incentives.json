@@ -1,0 +1,24 @@
+[
+    {
+      "state": "Washington",
+      "energy_source": "Windmill",
+      "incentive": "Incentive details for wind energy in Washington"
+    },
+    {
+      "state": "Washington",
+      "energy_source": "Solar",
+      "incentive": "Incentive details for solar energy in Washington"
+    },
+    {
+      "state": "Washington",
+      "energy_source": "Biomass",
+      "incentive": "Incentive details for biomass energy in Washington"
+    },
+    {
+      "state": "Washington",
+      "energy_source": "Heatpumps",
+      "incentive": "Incentive details for heat pumps in Washington"
+    }
+   
+  ]
+  

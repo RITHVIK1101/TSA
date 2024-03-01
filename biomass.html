@@ -7,102 +7,119 @@
   <link rel="stylesheet" href="intro.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="solution.css">
+  <link rel="stylesheet" href="biomass-solution.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <title>Biomass Energy</title>
 </head>
+
 <nav class="navbar">
-  <div class="logo">
-    <img src="logo.png" alt="Logo">
-</div>
+  <a href="index.html">
+    <div class="logo">
+        <img src="imgs/logo.png" alt="Logo">
+    </div>
+</a>
 <ul class="menu">
-  <li class="menu-item"><a href="index.html">HOME</a></li>
   <li class="menu-item"><a href="about-us.html">ABOUT US</a></li>
- 
   <li class="menu-item dropdown">
     <a href="#">SOLUTIONS</a>
-    <div class="dropdown-content">
-        <a href="wind.html">Wind Energy</a>
-        <a href="solar.html">Solar Energy</a>
-        <a href="biomass.html">Biomass Energy</a>
-        <a href="heat-pump.html">Heat Pumps</a>
+    <div class="dropdown-content solution-dropdown"> <!-- Added a specific class for the dropdown under Solutions -->
+      <a href="wind.html">Wind Energy</a>
+      <a href="solar.html">Solar Energy</a>
+      <a href="biomass.html">Biomass Energy</a>
+      <a href="heat-pump.html">Heat Pumps</a>
     </div>
-</li>
+  </li>
   <li class="menu-item"><a href="#">TAX INCENTIVES</a></li>
-  <li class="menu-item"><a href="file:///Users/rithviksaba/Desktop/quick/vari.html">ACCOUNT</a></li>
+  <li class="menu-item"><a href="login.html">ACCOUNT</a></li>
   <li class="menu-item"><a href="#">BLOG</a></li>
   <li class="menu-item dropdown">
-      <a href="#">TSA</a>
-      <div class="dropdown-content">
-          <a href="pdfs/student-copyright-checklist.pdf">Copyright Checklist</a>
-              <a href="pdfs/plan-of-work-log.pdf">Work Log</a>
+    <a href="#">TSA</a>
+    <div class="dropdown-content tsa-dropdown">
+      <a href="pdfs/Pix student-copyright-checklist (1).pdf">Copyright Checklist</a>
+          <a href="pdfs/plan-of-work-log.pdf">Work Log</a>
           <a href="#">Sources</a>
-          <a href="#">Branding Guidelines</a>
-      </div>
+          <a href="pdfs/Branding_Guidelines_1.pdf">Branding Guidelines</a>
+    </div>
   </li>
 </ul>
 </nav>
+
   <section class = "intro-section">
     <video autoplay muted loop id="video-background">
-      <source src="biomass-bg.mp4" type="video/mp4">
+      <source src="imgs/biomass-bg.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
-    <!-- Text overlay container -->
     <div class="text-overlay">
-      <h1>Biomass energy<br>⌄</h1>
+      <h1>Biomass Energy<br>⌄</h1>
     </div>
-   </section> 
+   </section>
+
+  <section class = "top-divider"></section>
 
   <section class="solution-container">
     <div class="solution-content">
         <div class ="solution-text">
             <h2>What is Biomass Energy?</h2>
-            <p>Wind power is the use of wind energy to generate useful work. 
-                Historically, wind power was used by sails, windmills and windpumps, but today it is mostly used to generate electricity. 
-                This article deals only with wind power for electricity generation. Today, wind power is generated almost completely with wind turbines, generally grouped into wind farms and connected to the electrical grid.
+            <p>
+              Biomass energy harnesses the power stored in organic materials, such as wood, agricultural crops, and waste, to generate heat or electricity. Through the utilization of biomass, organic matter undergoes combustion or conversion processes to release energy for various applications. This solution involves the collection and processing of biomass materials, which are then burned or converted in specialized facilities to produce heat or electricity.
             </p>
-            <p>In 2022, wind supplied over 2000 TWh of electricity, which was over 7% of world electricity and about 2% of world energy.
-                 With about 100 GW added during 2021, mostly in China and the United States, global installed wind power capacity exceeded 800 GW. 
-                 To help meet the Paris Agreement goals to limit climate change, analysts say it should expand much faster - by over 1% of electricity generation per year.
+            <p>
+              The Earth's biomass reserves offer a significant renewable energy source, with vast quantities of organic matter available for sustainable utilization. Estimates suggest that biomass could potentially supply a substantial portion of global energy demand, with an abundance of resources available for conversion. Unlike fossil fuels, biomass fuels are typically CO2 neutral, only emitting the CO2 absorbed during the growth phase.
             </p>
+            <p>
+              According to the <a href =  "https://www.eia.gov/kids/energy-sources/biomass/#:~:text=Biomass%20provided%20about%205%25%20of,(or%204.9%20quadrillion%20Btu)." style = "text-decoration: none; color: green;">US Energy Information Administration</a>, biomass currently accounts for approximately 
+              5% of U.S. electricity generation from all sources in 2020. The adoption of biomass energy is expected to continue growing in the coming years, driven by advancements in technology and increasing recognition of its environmental benefits. As economies strive to reduce their carbon footprint and transition towards cleaner energy sources, biomass energy stands as a key component of the renewable energy landscape, poised to play a significant role in the future energy mix. 
+            </p>
+            <br><br>
         </div>
+    </div>
+  </section>
+
+  <section class="solution-desc-container">
+    <div class="left-column">
+      <div class="solution-box" id="box1">
+        <h2>Wood Pellets</h2>
+        <p>
+          Pellets are a processed form of wood, which make them much more condensed and uniform, and therefore more efficient. The pellets are stored and automatically fed into the boiler by hopper.
+        </p>
+      </div>
+      <div class="solution-box" id="box2">
+        <h2>Boiler</h2>
+        <p>
+          A biomass boiler works in a very similar way to conventional boilers, combusting fuel to produce heat that is then used to heat water. Biomass boilers are normally substantially bigger than traditional boilers since the boiler needs to be larger to hold the larger volume of fuel.
+        </p>
+      </div>
+      <div class="solution-box" id="box3">
+        <h2>Heat Exchange</h2>
+        <p>
+          The heat generated from the combustion process is transferred to a heat exchanger or boiler vessel. Water or another heat transfer fluid circulates through the heat exchanger, absorbing the heat from the biomass combustion.
+        </p>
+      </div>
+    </div>
+    <div class="right-column">
+      <img src="imgs/biomass-heater.jpg" alt="Biomass Heater Image" class="biomass-img">
+      <div class="button-overlay" id="button1"></div>
+      <div class="button-overlay" id="button2"></div>
+      <div class="button-overlay" id="button3"></div>
     </div>
   </section>
 
   <section class="solution-column">
     <div class="solution-column-content">
         <div class="solution-graph">
-            <img src="wind-graph.png" alt="Wind Generation">
+            <img src="imgs/biomass-diagram.jpg" alt="Biomass Diagram">
         </div>
         <div class="solution-column-text">
-            <p>Wind power is considered a sustainable, renewable energy source, and has a much smaller impact on the environment compared to burning fossil fuels.
-                Wind power is variable, so it needs energy storage or other dispatchable generation energy sources to attain a reliable supply of electricity. Land-based (onshore) wind farms have a greater visual impact on the landscape than most other power stations per energy produced.
-                Wind farms sited offshore have less visual impact and have higher capacity factors, although they are generally more expensive.Offshore wind power currently has a share of about 10% of new installations.
+            <p>
+              Biomass plays a crucial role in waste management by providing a sustainable solution for organic waste disposal. Organic waste materials, such as agricultural residues, food scraps, and forestry residues, can be converted into biomass energy through various processes like anaerobic digestion, combustion, and gasification. By utilizing biomass energy, organic waste that would otherwise contribute to landfills and environmental degradation can be repurposed to generate heat, electricity, or biofuels.
             </p>
             <p>
-                Wind power is one of the lowest-cost electricity sources per unit of energy produced. In many locations, new onshore wind farms are cheaper than new coal or gas plants.
-                Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible.
+              For homeowners, accessing biomass energy typically involves installing <a href =  "https://www.caluweinc.com/products/heizomat-ak-series-biomass-boilers-call/?gad_source=1&gclid=Cj0KCQiA84CvBhCaARIsAMkAvkLWsxJbsRlHVSV3mLML7fG6jLsn1UaA64_zk0ixboKtVl1WejUqt6saAj1JEALw_wcB" style = "text-decoration: none; color: green;">Biomass Heating Systems</a> that utilize wood pellets, wood chips, or other biomass fuels to provide heat for their homes. These systems operate similarly to traditional heating systems but use renewable biomass fuels instead of fossil fuels.
+              It can be installed with minimal modifications to an existing heating system.
             </p>
             <p>
-                Regions in the higher northern and southern latitudes have the highest potential for wind power.
-                In most regions, wind power generation is higher in nighttime, and in winter when solar power output is low. For this reason, combinations of wind and solar power are suitable in many countries.
-            </p>
-        </div>
-    </div>
-  </section>
-
-  <section class="solution-container">
-    <div class="solution-content">
-        <div class ="solution-text">
-            <h2>How to get Wind Energy</h2>
-            <p>Wind power is the use of wind energy to generate useful work. 
-                Historically, wind power was used by sails, windmills and windpumps, but today it is mostly used to generate electricity. 
-                This article deals only with wind power for electricity generation. Today, wind power is generated almost completely with wind turbines, generally grouped into wind farms and connected to the electrical grid.
-            </p>
-            <p>In 2022, wind supplied over 2000 TWh of electricity, which was over 7% of world electricity and about 2% of world energy.
-                 With about 100 GW added during 2021, mostly in China and the United States, global installed wind power capacity exceeded 800 GW. 
-                 To help meet the Paris Agreement goals to limit climate change, analysts say it should expand much faster - by over 1% of electricity generation per year.
+              In addition, you may wish to install an automatic feed hopper on your biomass boiler. This hopper stores a large amounts of the wood pellets that are then automatically fed into the boiler as required, meaning that the boiler needs to be refuelled very infrequently (typically monthly).
             </p>
         </div>
     </div>
@@ -112,18 +129,23 @@
     <div class="solution-content">
         <div class ="solution-text">
             <h2>What does it cost?</h2>
-            <p>Wind power is the use of wind energy to generate useful work. 
-                Historically, wind power was used by sails, windmills and windpumps, but today it is mostly used to generate electricity. 
-                This article deals only with wind power for electricity generation. Today, wind power is generated almost completely with wind turbines, generally grouped into wind farms and connected to the electrical grid.
+            <p>
+              Automatically-fed wood pellet burning biomass heaters can cost anywhere from $12-20,000. However, smaller domestic boilers with limited capabilities can start at $5000.
+              If you are able to feed them manually, the price can further be reduced to $5-8,000. Not to mention, tax rebates can cover up to $5,000 for larger boilers.
             </p>
-            <p>In 2022, wind supplied over 2000 TWh of electricity, which was over 7% of world electricity and about 2% of world energy.
-                 With about 100 GW added during 2021, mostly in China and the United States, global installed wind power capacity exceeded 800 GW. 
-                 To help meet the Paris Agreement goals to limit climate change, analysts say it should expand much faster - by over 1% of electricity generation per year.
+            <p>
+              It might seem like a more expensive option compared to a $2,500 gas boiler, but once installed, a biomass boiler (4.2¢/kWh) can be cheaper to run than gas (5¢/kWh), oil (6.1¢/kWh) and electricity (13.4¢/kWh). They are generally cheaper, more efficient, and more sustainable in the long run.
             </p>
         </div>
     </div>
   </section>
 
+  <section class="website">
+    <img src="imgs/biomass-energy-screenshot.jpg" alt="Website Image" class="website-image">
+    <a href="https://www.hargassner-northamerica.com/products/eco-hk-150-200.html" class="buy-now-button">Buy Now</a>
+  </section>
+
+  <section class = "bottom-divider"></section>
 
   <footer class="footer">
     <div class="footer-container">
@@ -133,11 +155,7 @@
           offering detailed insights into their workings, installation processes, and benefits. 
           Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible. 
         </p>
-        <div class="social-icons">
-          <a href="https://twitter.com"><img src="x-logo.webp" alt="Twitter"></a>
-          <a href="https://facebook.com"><img src="facebook-icon.png" alt="Facebook"></a>
-          <a href="https://instagram.com"><img src="instagram-logo.png" alt="Instagram"></a>
-        </div>
+      
       </div>
       <div class="footer-column">
         <h3>Sections</h3>
@@ -166,7 +184,6 @@
   <script src ="script.js"></script>
   <script src ="intro-animation.js"></script>
   <script src ="progress-bar.js"></script>
-  <script src ="calculatefootprint.js"></script>
-
+  <script src ="button-overlay.js"></script>
 </body>
 </html>

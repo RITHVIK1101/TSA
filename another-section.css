@@ -1,0 +1,43 @@
+.another-section {
+    background-color: #ffffff;
+    
+    padding-bottom: 5%;
+    padding-right: -15%;
+}
+
+.another-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.another-heading {
+    flex: 1;
+    text-align: left; /* Align the heading to the left */
+}
+
+.another-heading h2 {
+    font-size: 3.1em;
+    margin-bottom: 2.3em; /* Adjust margin as needed */
+    background-image: linear-gradient(to right, #026932c3 5%, #06a713ca 10%, #05d168c8 60%, #027224c9 90%); /* Brown to Orange to Green gradient */
+    -webkit-background-clip: text; /* Apply background to the text */
+    color: transparent;
+}
+
+.another-text {
+    flex: 1;
+    text-align: left; /* Align the text to the left */
+    margin-right: -3em; /* Adjust the left margin to move the text more to the right */
+}
+
+
+.another-text p {
+    font-size: 1.25em;
+    line-height: 1.6;
+    margin-bottom: 15px; /* Adjust margin as needed */
+    color: #666666; 
+    margin-top: -2em;
+}

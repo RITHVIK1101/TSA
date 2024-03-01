@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Dropdown</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="tax-incentives.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="Logo">
+        </div>
+    </a>
+    <ul class="menu">
+        <li class="menu-item"><a href="about-us.html">ABOUT US</a></li>
+        <li class="menu-item dropdown">
+            <a href="#">SOLUTIONS</a>
+            <div class="dropdown-content solution-dropdown">
+                <a href="wind.html">Wind Energy</a>
+                <a href="solar.html">Solar Energy</a>
+                <a href="biomass.html">Biomass Energy</a>
+                <a href="heat-pump.html">Heat Pumps</a>
+            </div>
+        </li>
+        <li class="menu-item"><a href="#">TAX INCENTIVES</a></li>
+        <li class="menu-item"><a href="login.html">ACCOUNT</a></li>
+        <li class="menu-item"><a href="#">BLOG</a></li>
+        <li class="menu-item dropdown">
+            <a href="#">TSA</a>
+            <div class="dropdown-content tsa-dropdown">
+                <a href="pdfs/Pix student-copyright-checklist (1).pdf">Copyright Checklist</a>
+                <a href="pdfs/plan-of-work-log.pdf">Work Log</a>
+                <a href="#">Sources</a>
+                <a href="pdfs/Branding_Guidelines_1.pdf">Branding Guidelines</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<div class="tax-incentives">
+    <div class="background-image"></div>
+    <div class="overlay"></div>
+    <div class="state-dropdown"> <!-- Renamed class from "dropdown" to "state-dropdown" -->
+        <input type="text" placeholder="Search states..." class="search-input">
+        <div class="tax-dropdown-content">
+            <ul class="states-list">
+                <!-- Fifty American states will be dynamically added here -->
+                <li>Alaska</li>
+<li>Arizona</li>
+<li>Arkansas</li>
+<li>California</li>
+<li>Colorado</li>
+<li>Connecticut</li>
+<li>Delaware</li>
+<li>Florida</li>
+<li>Georgia</li>
+<li>Hawaii</li>
+<li>Idaho</li>
+<li>Illinois</li>
+<li>Indiana</li>
+<li>Iowa</li>
+<li>Kansas</li>
+<li>Kentucky</li>
+<li>Louisiana</li>
+<li>Maine</li>
+<li>Maryland</li>
+<li>Massachusetts</li>
+<li>Michigan</li>
+<li>Minnesota</li>
+<li>Mississippi</li>
+<li>Missouri</li>
+<li>Montana</li>
+<li>Nebraska</li>
+<li>Nevada</li>
+<li>New Hampshire</li>
+<li>New Jersey</li>
+<li>New Mexico</li>
+<li>New York</li>
+<li>North Carolina</li>
+<li>North Dakota</li>
+<li>Ohio</li>
+<li>Oklahoma</li>
+<li>Oregon</li>
+<li>Pennsylvania</li>
+<li>Rhode Island</li>
+<li>South Carolina</li>
+<li>South Dakota</li>
+<li>Tennessee</li>
+<li>Texas</li>
+<li>Utah</li>
+<li>Vermont</li>
+<li>Virginia</li>
+<li>Washington</li>
+<li>West Virginia</li>
+<li>Wisconsin</li>
+<li>Wyoming</li>
+            </ul>
+        </div>
+    </div>
+    <div id="tax-incentives-container"></div> <!-- Container to display tax incentives -->
+</div>
+
+<script src="tax-incentives.js"></script>
+</body>
+</html>
+
+
+
