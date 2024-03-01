@@ -159,3 +159,11 @@ body {
       overflow: hidden;
     }
   }
+  .source-item {
+    display: none; /* Initially hide all slides */
+  }
+  
+  .source-item.active {
+    display: block; /* Display the active slide */
+  }
+  

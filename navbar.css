@@ -27,6 +27,11 @@
   font-weight: 400;
   font-style: normal;
 }
+.logo img{
+  height:5em;
+  width: 7em;
+  margin-left: 2em;
+}
 
 
 .menu-item a {
@@ -73,7 +78,7 @@
   
   left:-2em;
   height:18em;
-  bottom: -19em;
+  bottom: -18.5em;
   text-align: center;
 }
 

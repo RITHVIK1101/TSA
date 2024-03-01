@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="calculate.css">
   <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="pollution.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,11 +21,19 @@
 <body>
   <nav class="navbar">
     <div class="logo">
-      <img src="logo.png" alt="Logo">
+      <img src="imgs/logo.png" alt="Logo">
   </div>
   <ul class="menu">
-    <li class="menu-item"><a href="#">ABOUT</a></li>
-    <li class="menu-item"><a href="solutions.html">SOLUTIONS</a></li>
+    <li class="menu-item"><a href="about-us.html">ABOUT US</a></li>
+    <li class="menu-item dropdown">
+      <a href="#">SOLUTIONS</a>
+      <div class="dropdown-content">
+          <a href="wind.html">Wind Energy</a>
+          <a href="solar.html">Solar Energy</a>
+          <a href="biomass.html">Biomass Energy</a>
+          <a href="heat-pump.html">Heat Pumps</a>
+      </div>
+  </li>
     <li class="menu-item"><a href="#">TAX INCENTIVES</a></li>
     <li class="menu-item"><a href="file:///Users/rithviksaba/Desktop/quick/vari.html">ACCOUNT</a></li>
     <li class="menu-item"><a href="#">BLOG</a></li>
@@ -55,19 +64,70 @@
 
   <section class="about-us-section">
     <div class="about-us-content">
-        <div class="about-us-image">
+        <div class="about-us-image animate">
             <img src="imgs/about-us-image.jpeg" alt="About Us Image">
             <p style = "color: #666;">Based in the Pacific Northwest</p>
         </div>
-        <div class="about-us-text">
+        <div class="about-us-text animate">
             <h2>What is Earthwise?</h2>
             <p>Earthwise is an informational website committed to demystifying renewable energy solutions offering detailed insights into their workings, installation processes, and benefits.</p>
             <p>Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible.</p>
         </div>
     </div>
   </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var aboutUsSection = document.querySelector(".about-us-section");
+
+    function isInViewport(element) {
+        var bounding = element.getBoundingClientRect();
+        return (
+            bounding.top >= 0 &&
+            bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+
+    function toggleAnimation() {
+        var aboutUsImage = aboutUsSection.querySelector('.about-us-image');
+        var aboutUsText = aboutUsSection.querySelector('.about-us-text');
+        if (isInViewport(aboutUsImage)) {
+            aboutUsImage.classList.add("animate");
+        } else {
+            aboutUsImage.classList.remove("animate");
+        }
+        if (isInViewport(aboutUsImage)) {
+            aboutUsText.classList.add("animate");
+        } else {
+            aboutUsText.classList.remove("animate");
+        }
+    }
+
+    toggleAnimation(); // Initial check
+    window.addEventListener("scroll", toggleAnimation);
+});
+
+</script>
+  
+  <!-- After the closing tag of the about-us-section -->
+  <section class="pollution-section">
+    <div class="pollution-overlay">
+        
+        <div class="pollution-text">
+            <h2>Why Green Energy?</h2>
+            <p>Earthwise is an informational website committed to demystifying renewable energy solutions offering detailed insights into their workings, installation processes, and benefits.</p>
+            <p>Through our platform, users can connect with local businesses specializing in sustainable energy solutions and explore tax incentives to make eco-conscious choices more accessible.</p>
+        </div>
+ 
+        <div class="pollution-image">
+          <img src="imgs/Cost_Of_Electricity_per_solution_in_usdkwh.png" alt="Pollution Graph">
+        </div>
+        
+    </div>
+  </section>
   
 
+  
+  
   <section class = "calc-hero">
   <h1 class = "carbon-footprint-header">Calculate Your Carbon Footprint!</h1>
   <div class="calc-container">
@@ -111,7 +171,7 @@
   </div>
   </section>
   <section class="energy-sources">
-    <div class="source-item">
+    <div class="source-item active">
     
       <div class="source-content">
         <div class="source-body-text">
@@ -145,7 +205,7 @@
             Your browser does not support the video tag.
           </video>
           <div class="overlay">
-            <h2 class="outlined-text">Wind Energy</h2>
+            <h2 class="outlined-text">Solar Energy</h2>
           </div>
           <div class="card__data">
             <span class="card__description">Vancouver Mountains, Canada</span>
@@ -170,7 +230,7 @@
             Your browser does not support the video tag.
           </video>
           <div class="overlay">
-            <h2 class="outlined-text">Wind Energy</h2>
+            <h2 class="outlined-text">Biomass Energy</h2>
           </div>
           <div class="card__data">
             <span class="card__description">Vancouver Mountains, Canada</span>
@@ -196,7 +256,7 @@
             Your browser does not support the video tag.
           </video>
           <div class="overlay">
-            <h2 class="outlined-text">Wind Energy</h2>
+            <h2 class="outlined-text">Heat Pumps</h2>
           </div>
           <div class="card__data">
             <span class="card__description">Vancouver Mountains, Canada</span>
@@ -212,8 +272,77 @@
       </div>
        
     </div>
- 
+    <div class="indicators">
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+      <div class="indicator"></div>
+  </div>
+  <div class="arrow arrow-left">&lt;</div>
+    <div class="arrow arrow-right">&gt;</div>
+    
   </section>
+  
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.source-item');
+    const indicators = document.querySelectorAll('.indicator');
+    const arrows = document.querySelectorAll('.arrow');
+    
+    function showSlide(index) {
+        // Hide all slides
+        slides.forEach((slide) => {
+            slide.classList.remove('active');
+        });
+        // Show the slide at the specified index
+        slides[index].classList.add('active');
+
+        // Update active indicator
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+    }
+    
+    function nextSlide() {
+        // Move to the next slide
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        // Move to the previous slide
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        showSlide(currentSlide);
+    }
+    
+    // Show the initial slide
+    showSlide(currentSlide);
+    
+    // Automatically advance to the next slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Handle click events on indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            goToSlide(index);
+        });
+    });
+
+    // Handle click events on arrows
+    arrows.forEach((arrow) => {
+        arrow.addEventListener('click', (event) => {
+            const direction = event.target.classList.contains('arrow-left') ? 'prev' : 'next';
+            direction === 'prev' ? prevSlide() : nextSlide();
+        });
+    });
+});
+</script>
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">

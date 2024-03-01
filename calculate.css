@@ -59,7 +59,7 @@
   .carbon-footprint-header {
     text-align: center;
     font-size: 3em;
-    background-image: linear-gradient(to right, #026932c3 5%, #06a713ca 10%, #05d168c8 60%, #027224c9 90%);
+    background-image: linear-gradient(to right, #026932c3 5%, #06a713ca 10%, #05d172c8 60%, #027224c9 90%);
     -webkit-background-clip: text;
     color: transparent;
   }

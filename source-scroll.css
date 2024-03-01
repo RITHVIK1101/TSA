@@ -6,6 +6,7 @@
     scroll-snap-type: x mandatory;
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
 .source-item {
@@ -14,6 +15,7 @@
     position: relative;
     height: 100vh;
     width: 100vw;
+    animation-duration: 1s; /* Duration of the slide animation */
 }
   .energy-sources {
     filter: blur(0); 
@@ -173,4 +175,75 @@
     }
   }
   
- 
+  .source-item {
+    display: none; /* Initially hide all slides */
+  }
+  
+  .source-item.active {
+    display: block; /* Display the active slide */
+    animation-duration: 1s; /* Duration of the slide animation */
+  }
+  .slide-down {
+    animation-name: slideDown; /* Use slideDown animation for transitioning */
+  }
+  .slide-up {
+    animation-name: slideUp; /* Use slideUp animation for transitioning */
+}
+@keyframes slideUp {
+  from {
+      transform: translateY(100%); /* Start from below the container */
+  }
+  to {
+      transform: translateY(0); /* Slide up to the top of the container */
+  }
+}
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%); /* Start from above the container */
+    }
+    to {
+      transform: translateY(0); /* Slide down to the top of the container */
+    }
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    z-index: 1;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+  .indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.indicator {
+    width: 5em;
+    height: 0.35em;
+    border-radius: 10%;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 3em;
+   
+    margin: 3em 0.9em;
+}
+
+.indicator.active {
+    background-color: rgb(6, 241, 92);
+}

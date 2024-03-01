@@ -1,7 +1,7 @@
 .about-us-section {
     background-color: #ffffff;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
+    padding-top: 5.5%;
+    padding-bottom: 10%;
 }
 
 .about-us-content {
@@ -17,6 +17,13 @@
     flex: 1;
     padding-right: 10%;
     padding-top: 10%;
+    
+}
+.about-us-image.animate{
+    animation: flyInLeft 1s ease forwards;
+}
+.about-us-text.animate{
+    animation: flyInRight 1s ease forwards;
 }
 
 .about-us-image img {
@@ -27,6 +34,27 @@
     transition: transform 0.5s ease;
     box-shadow: 2.5px 5px 12px #0f0f0f90;
   }
+
+  @keyframes flyInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes flyInRight {
+    0% {
+        transform: translateX(100%); /* Start position: outside the viewport on the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End position: translated to its original position */
+        opacity: 1;
+    }
+}
 
 .about-us-image img:hover{
     transform: scale(1.025);
